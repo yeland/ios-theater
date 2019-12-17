@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -56,7 +56,6 @@
 				7F359972AD4DFC5825FBAE5B /* Pods-ios-theater.debug.xcconfig */,
 				052243F56C7D6A5E4ED9BCCD /* Pods-ios-theater.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +80,47 @@
 		F834B8BA23A8533300DA85D2 /* ios-theater */ = {
 			isa = PBXGroup;
 			children = (
+				F834B8CF23A8657B00DA85D2 /* Model */,
+				F834B8D123A8659200DA85D2 /* ViewModel */,
+				F834B8D223A8659B00DA85D2 /* View */,
+				F834B8D023A8658600DA85D2 /* Controller */,
 				F834B8BB23A8533300DA85D2 /* AppDelegate.swift */,
 				F834B8BD23A8533300DA85D2 /* SceneDelegate.swift */,
-				F834B8BF23A8533300DA85D2 /* ViewController.swift */,
 				F834B8C123A8533300DA85D2 /* Main.storyboard */,
 				F834B8C423A8533700DA85D2 /* Assets.xcassets */,
 				F834B8C623A8533700DA85D2 /* LaunchScreen.storyboard */,
 				F834B8C923A8533700DA85D2 /* Info.plist */,
 			);
 			path = "ios-theater";
+			sourceTree = "<group>";
+		};
+		F834B8CF23A8657B00DA85D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F834B8D023A8658600DA85D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F834B8BF23A8533300DA85D2 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F834B8D123A8659200DA85D2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F834B8D223A8659B00DA85D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
