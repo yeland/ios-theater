@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B77FBC90471E437AF02A56CC /* Pods_ios_theater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138C0A9E5351E7A985DF3712 /* Pods_ios_theater.framework */; };
 		F834B8BC23A8533300DA85D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834B8BB23A8533300DA85D2 /* AppDelegate.swift */; };
 		F834B8BE23A8533300DA85D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834B8BD23A8533300DA85D2 /* SceneDelegate.swift */; };
 		F834B8C023A8533300DA85D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834B8BF23A8533300DA85D2 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		052243F56C7D6A5E4ED9BCCD /* Pods-ios-theater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-theater.release.xcconfig"; path = "Target Support Files/Pods-ios-theater/Pods-ios-theater.release.xcconfig"; sourceTree = "<group>"; };
+		138C0A9E5351E7A985DF3712 /* Pods_ios_theater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_theater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F359972AD4DFC5825FBAE5B /* Pods-ios-theater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-theater.debug.xcconfig"; path = "Target Support Files/Pods-ios-theater/Pods-ios-theater.debug.xcconfig"; sourceTree = "<group>"; };
 		F834B8B823A8533300DA85D2 /* ios-theater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-theater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F834B8BB23A8533300DA85D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F834B8BD23A8533300DA85D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B77FBC90471E437AF02A56CC /* Pods_ios_theater.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3419CB9F718944D087996CB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				138C0A9E5351E7A985DF3712 /* Pods_ios_theater.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D367B291AD5D2AB65910B18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F359972AD4DFC5825FBAE5B /* Pods-ios-theater.debug.xcconfig */,
+				052243F56C7D6A5E4ED9BCCD /* Pods-ios-theater.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F834B8AF23A8533300DA85D2 = {
 			isa = PBXGroup;
 			children = (
 				F834B8BA23A8533300DA85D2 /* ios-theater */,
 				F834B8B923A8533300DA85D2 /* Products */,
+				5D367B291AD5D2AB65910B18 /* Pods */,
+				3419CB9F718944D087996CB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F834B8CC23A8533700DA85D2 /* Build configuration list for PBXNativeTarget "ios-theater" */;
 			buildPhases = (
+				48EB8C8DDDC6207A62F782AC /* [CP] Check Pods Manifest.lock */,
 				F834B8B423A8533300DA85D2 /* Sources */,
 				F834B8B523A8533300DA85D2 /* Frameworks */,
 				F834B8B623A8533300DA85D2 /* Resources */,
+				6EFB3DBD0C3D5E6E6E95BA76 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		48EB8C8DDDC6207A62F782AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ios-theater-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EFB3DBD0C3D5E6E6E95BA76 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios-theater/Pods-ios-theater-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios-theater/Pods-ios-theater-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios-theater/Pods-ios-theater-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F834B8B423A8533300DA85D2 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		F834B8CD23A8533700DA85D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F359972AD4DFC5825FBAE5B /* Pods-ios-theater.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		F834B8CE23A8533700DA85D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 052243F56C7D6A5E4ED9BCCD /* Pods-ios-theater.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
