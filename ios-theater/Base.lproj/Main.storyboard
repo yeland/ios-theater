@@ -14,26 +14,7 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner1" translatesAutoresizingMaskIntoConstraints="NO" id="KOT-AF-daD">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="FlF-Ik-dw7"/>
-                                </constraints>
-                            </imageView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="cSJ-ha-6gt">
-                                <rect key="frame" x="310" y="251" width="84" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="pageIndicatorTintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="currentPageIndicatorTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </pageControl>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="KOT-AF-daD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9p2-2x-WPl"/>
-                            <constraint firstItem="KOT-AF-daD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZLc-PT-m6w"/>
-                            <constraint firstAttribute="trailing" secondItem="KOT-AF-daD" secondAttribute="trailing" id="aBE-d1-FiS"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ajs-pr-aZQ"/>
@@ -61,7 +42,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="banner1" width="650" height="432"/>
-    </resources>
 </document>
