@@ -13,19 +13,43 @@ class HomePageViewController: UIViewController {
   @IBOutlet weak var pageControl: UIPageControl!
   
   let images = ["banner1", "banner2", "banner3", "banner4", "banner5"]
+  var timer: Timer?
 
   override func viewDidLoad() {
     super.viewDidLoad()
     collectionView.dataSource = self
     collectionView.delegate = self
+    collectionView.scrollToItem(at: IndexPath.init(row: 0, section: 50), at: .centeredHorizontally, animated: true)
     navigationController?.navigationBar.isHidden = true
     collectionView.contentInsetAdjustmentBehavior = .never    
     pageControl.numberOfPages = images.count
     pageControl.currentPage = 0
+    addTimer()
+  }
+  
+  private func addTimer() {
+    timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.autoSwitch), userInfo: nil, repeats: true)
+  }
+  
+  @objc private func autoSwitch() {
+    let indexPath = collectionView.indexPathsForVisibleItems.last
+    guard let currentIndexPath = indexPath else { return }
+    var nextItem = (currentIndexPath.item) + 1
+    var nextSection = currentIndexPath.section
+    if nextItem == images.count {
+      nextItem = 0
+      nextSection += 1
+    }
+    let nextIndexPath = IndexPath(item: nextItem, section: nextSection)
+    collectionView.scrollToItem(at: nextIndexPath, at: .left, animated: true)
   }
 }
 
 extension HomePageViewController: UICollectionViewDataSource {
+  func numberOfSections(in collectionView: UICollectionView) -> Int {
+    return 100
+  }
+  
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return images.count
   }
@@ -37,14 +61,6 @@ extension HomePageViewController: UICollectionViewDataSource {
     cell.configure(image: images[indexPath.item])
     return cell
   }
-  
-  func scrollViewDidScroll(_ scrollView: UIScrollView) {
-    let visibleRect = CGRect(origin: self.collectionView.contentOffset, size: self.collectionView.bounds.size)
-    let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
-    if let visibleIndexPath = self.collectionView.indexPathForItem(at: visiblePoint) {
-      self.pageControl.currentPage = visibleIndexPath.row
-    }
-  }
 }
 
 extension HomePageViewController: UICollectionViewDelegateFlowLayout {
@@ -53,5 +69,21 @@ extension HomePageViewController: UICollectionViewDelegateFlowLayout {
   }
 }
 
-
-
+extension HomePageViewController: UIScrollViewDelegate {
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    let visibleRect = CGRect(origin: self.collectionView.contentOffset, size: self.collectionView.bounds.size)
+    let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
+    if let visibleIndexPath = self.collectionView.indexPathForItem(at: visiblePoint) {
+      self.pageControl.currentPage = visibleIndexPath.row
+    }
+  }
+  
+  func scrollViewWillBeginDragging (_ scrollView: UIScrollView) {
+    timer?.invalidate()
+    timer = nil
+  }
+  
+  func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    addTimer()
+  }
+}
