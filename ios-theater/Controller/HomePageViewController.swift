@@ -15,6 +15,7 @@ class HomePageViewController: UIViewController {
   private let largeNumberForSections = 100
   private let images = ["banner1", "banner2", "banner3", "banner4", "banner5"]
   private var timer: Timer?
+  let moviesViewModel = MoviesViewModel()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -28,6 +29,13 @@ class HomePageViewController: UIViewController {
   
   override func viewDidAppear(_ animated: Bool) {
     addTimer()
+    fetchData()
+  }
+  
+  private func fetchData() {
+    moviesViewModel.fetchHotMovies() {
+      print(self.moviesViewModel.hotMovies[1].title)
+    }
   }
   
   override func viewDidDisappear(_ animated: Bool) {
