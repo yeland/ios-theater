@@ -59,7 +59,7 @@ class HomePageViewController: UIViewController {
 
 extension HomePageViewController: UICollectionViewDataSource {
   func numberOfSections(in collectionView: UICollectionView) -> Int {
-    return 100
+    return largeNumberForSections
   }
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
