@@ -9,32 +9,35 @@
 import UIKit
 
 class HomePageViewController: UIViewController {
-  @IBOutlet weak var collectionView: UICollectionView!
+  @IBOutlet weak var bannerCollectionView: UICollectionView!
   @IBOutlet weak var pageControl: UIPageControl!
+  @IBOutlet weak var hotMoviesCollectionView: UICollectionView!
   
+  private let moviesViewModel = MoviesViewModel()
   private let largeNumberForSections = 100
   private let images = ["banner1", "banner2", "banner3", "banner4", "banner5"]
+  private let hotMoviesNumber = 6
   private var timer: Timer?
-  let moviesViewModel = MoviesViewModel()
 
   override func viewDidLoad() {
     super.viewDidLoad()
     let middleInSections = largeNumberForSections/2
-    collectionView.scrollToItem(at: IndexPath.init(row: 0, section: middleInSections), at: .centeredHorizontally, animated: true)
+    bannerCollectionView.scrollToItem(at: IndexPath.init(row: 0, section: middleInSections), at: .centeredHorizontally, animated: true)
     navigationController?.navigationBar.isHidden = true
-    collectionView.contentInsetAdjustmentBehavior = .never    
+    bannerCollectionView.contentInsetAdjustmentBehavior = .never    
     pageControl.numberOfPages = images.count
     pageControl.currentPage = 0
+    hotMoviesCollectionView.register(UINib(nibName: "MovieCollectionCell", bundle: nil), forCellWithReuseIdentifier: "MovieCollectionCell")
+    fetchData()
   }
   
   override func viewDidAppear(_ animated: Bool) {
     addTimer()
-    fetchData()
   }
   
   private func fetchData() {
     moviesViewModel.fetchHotMovies() {
-      print(self.moviesViewModel.hotMovies[1].title)
+      self.hotMoviesCollectionView.reloadData()
     }
   }
   
@@ -52,7 +55,7 @@ class HomePageViewController: UIViewController {
   }
   
   @objc private func autoSwitch() {
-    let indexPath = collectionView.indexPathsForVisibleItems.last
+    let indexPath = bannerCollectionView.indexPathsForVisibleItems.last
     guard let currentIndexPath = indexPath else { return }
     var nextItem = (currentIndexPath.item) + 1
     var nextSection = currentIndexPath.section
@@ -61,39 +64,57 @@ class HomePageViewController: UIViewController {
       nextSection += 1
     }
     let nextIndexPath = IndexPath(item: nextItem, section: nextSection)
-    collectionView.scrollToItem(at: nextIndexPath, at: .left, animated: true)
+    bannerCollectionView.scrollToItem(at: nextIndexPath, at: .left, animated: true)
   }
 }
 
 extension HomePageViewController: UICollectionViewDataSource {
   func numberOfSections(in collectionView: UICollectionView) -> Int {
-    return largeNumberForSections
+    if collectionView == self.bannerCollectionView {
+      return largeNumberForSections
+    }
+    return 1
   }
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return images.count
+    if collectionView == self.bannerCollectionView {
+      return images.count
+    }
+    return hotMoviesNumber > moviesViewModel.hotMovies.count ? moviesViewModel.hotMovies.count : hotMoviesNumber
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BannerCell", for: indexPath) as? BannerCell else {
-      fatalError("Can not create cell")
+    if collectionView == self.bannerCollectionView {
+      guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BannerCell", for: indexPath) as? BannerCell else {
+        fatalError("Can not create cell")
+      }
+      cell.configure(imageName: images[indexPath.item])
+      return cell
+    } else {
+      guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCollectionCell", for: indexPath) as? MovieCollectionCell else {
+        fatalError("Can not create cell")
+      }
+      cell.configure(movie: moviesViewModel.hotMovies[indexPath.item])
+      return cell
     }
-    cell.configure(imageName: images[indexPath.item])
-    return cell
   }
 }
 
 extension HomePageViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: view.bounds.width, height: collectionView.bounds.height)
+    if collectionView == self.bannerCollectionView {
+      return CGSize(width: view.bounds.width, height: collectionView.bounds.height)
+    } else {
+      return CGSize(width: 124, height: 240)
+    }
   }
 }
 
 extension HomePageViewController: UIScrollViewDelegate {
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
-    let visibleRect = CGRect(origin: self.collectionView.contentOffset, size: self.collectionView.bounds.size)
+    let visibleRect = CGRect(origin: self.bannerCollectionView.contentOffset, size: self.bannerCollectionView.bounds.size)
     let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
-    if let visibleIndexPath = self.collectionView.indexPathForItem(at: visiblePoint) {
+    if let visibleIndexPath = self.bannerCollectionView.indexPathForItem(at: visiblePoint) {
       self.pageControl.currentPage = visibleIndexPath.row
     }
   }
