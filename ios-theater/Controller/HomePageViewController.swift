@@ -12,23 +12,35 @@ class HomePageViewController: UIViewController {
   @IBOutlet weak var collectionView: UICollectionView!
   @IBOutlet weak var pageControl: UIPageControl!
   
-  let images = ["banner1", "banner2", "banner3", "banner4", "banner5"]
-  var timer: Timer?
+  private let largeNumberForSections = 100
+  private let images = ["banner1", "banner2", "banner3", "banner4", "banner5"]
+  private var timer: Timer?
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    collectionView.dataSource = self
-    collectionView.delegate = self
-    collectionView.scrollToItem(at: IndexPath.init(row: 0, section: 50), at: .centeredHorizontally, animated: true)
+    let middleInSections = largeNumberForSections/2
+    collectionView.scrollToItem(at: IndexPath.init(row: 0, section: middleInSections), at: .centeredHorizontally, animated: true)
     navigationController?.navigationBar.isHidden = true
     collectionView.contentInsetAdjustmentBehavior = .never    
     pageControl.numberOfPages = images.count
     pageControl.currentPage = 0
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
     addTimer()
+  }
+  
+  override func viewDidDisappear(_ animated: Bool) {
+    removeTimer()
   }
   
   private func addTimer() {
     timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.autoSwitch), userInfo: nil, repeats: true)
+  }
+  
+  private func removeTimer() {
+    timer?.invalidate()
+    timer = nil
   }
   
   @objc private func autoSwitch() {
@@ -58,7 +70,7 @@ extension HomePageViewController: UICollectionViewDataSource {
     guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BannerCell", for: indexPath) as? BannerCell else {
       fatalError("Can not create cell")
     }
-    cell.configure(image: images[indexPath.item])
+    cell.configure(imageName: images[indexPath.item])
     return cell
   }
 }
@@ -79,8 +91,7 @@ extension HomePageViewController: UIScrollViewDelegate {
   }
   
   func scrollViewWillBeginDragging (_ scrollView: UIScrollView) {
-    timer?.invalidate()
-    timer = nil
+    removeTimer()
   }
   
   func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {

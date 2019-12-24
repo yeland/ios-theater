@@ -53,6 +53,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="dOE-Nj-yVP"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="T3i-Qg-uhO"/>
+                                </connections>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="cSJ-ha-6gt">
                                 <rect key="frame" x="313" y="259" width="71" height="37"/>

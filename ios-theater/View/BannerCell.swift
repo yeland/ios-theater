@@ -11,8 +11,8 @@ import UIKit
 class BannerCell: UICollectionViewCell {
   @IBOutlet weak var imageView: UIImageView!
   
-  func configure(image: String) {
-    let image = UIImage(named: image)
+  func configure(imageName: String) {
+    let image = UIImage(named: imageName)
     imageView.image = image
   }
 }
