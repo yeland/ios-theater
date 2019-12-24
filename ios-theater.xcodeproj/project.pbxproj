@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B77FBC90471E437AF02A56CC /* Pods_ios_theater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138C0A9E5351E7A985DF3712 /* Pods_ios_theater.framework */; };
+		F82BA3A423AA1CCE0016F0F6 /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3A323AA1CCE0016F0F6 /* BannerCell.swift */; };
 		F834B8BC23A8533300DA85D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834B8BB23A8533300DA85D2 /* AppDelegate.swift */; };
 		F834B8BE23A8533300DA85D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834B8BD23A8533300DA85D2 /* SceneDelegate.swift */; };
-		F834B8C023A8533300DA85D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834B8BF23A8533300DA85D2 /* ViewController.swift */; };
+		F834B8C023A8533300DA85D2 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834B8BF23A8533300DA85D2 /* HomePageViewController.swift */; };
 		F834B8C323A8533300DA85D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F834B8C123A8533300DA85D2 /* Main.storyboard */; };
 		F834B8C523A8533700DA85D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F834B8C423A8533700DA85D2 /* Assets.xcassets */; };
 		F834B8C823A8533700DA85D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F834B8C623A8533700DA85D2 /* LaunchScreen.storyboard */; };
@@ -20,10 +21,11 @@
 		052243F56C7D6A5E4ED9BCCD /* Pods-ios-theater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-theater.release.xcconfig"; path = "Target Support Files/Pods-ios-theater/Pods-ios-theater.release.xcconfig"; sourceTree = "<group>"; };
 		138C0A9E5351E7A985DF3712 /* Pods_ios_theater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_theater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F359972AD4DFC5825FBAE5B /* Pods-ios-theater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-theater.debug.xcconfig"; path = "Target Support Files/Pods-ios-theater/Pods-ios-theater.debug.xcconfig"; sourceTree = "<group>"; };
+		F82BA3A323AA1CCE0016F0F6 /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
 		F834B8B823A8533300DA85D2 /* ios-theater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-theater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F834B8BB23A8533300DA85D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F834B8BD23A8533300DA85D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F834B8BF23A8533300DA85D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F834B8BF23A8533300DA85D2 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		F834B8C223A8533300DA85D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F834B8C423A8533700DA85D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F834B8C723A8533700DA85D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,7 +106,7 @@
 		F834B8D023A8658600DA85D2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F834B8BF23A8533300DA85D2 /* ViewController.swift */,
+				F834B8BF23A8533300DA85D2 /* HomePageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -119,6 +121,7 @@
 		F834B8D223A8659B00DA85D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F82BA3A323AA1CCE0016F0F6 /* BannerCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -238,7 +241,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F834B8C023A8533300DA85D2 /* ViewController.swift in Sources */,
+				F834B8C023A8533300DA85D2 /* HomePageViewController.swift in Sources */,
+				F82BA3A423AA1CCE0016F0F6 /* BannerCell.swift in Sources */,
 				F834B8BC23A8533300DA85D2 /* AppDelegate.swift in Sources */,
 				F834B8BE23A8533300DA85D2 /* SceneDelegate.swift in Sources */,
 			);
