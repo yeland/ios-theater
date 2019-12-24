@@ -54,18 +54,19 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="cSJ-ha-6gt">
-                                <rect key="frame" x="310" y="256" width="84" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="cSJ-ha-6gt">
+                                <rect key="frame" x="313" y="259" width="71" height="37"/>
                                 <color key="pageIndicatorTintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="currentPageIndicatorTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="WoJ-qV-QsV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7C8-SS-uZt"/>
+                            <constraint firstItem="cSJ-ha-6gt" firstAttribute="bottom" secondItem="WoJ-qV-QsV" secondAttribute="bottom" constant="-5" id="6nV-GN-XWP"/>
+                            <constraint firstItem="WoJ-qV-QsV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="7C8-SS-uZt"/>
                             <constraint firstItem="WoJ-qV-QsV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Dve-cS-H3C"/>
-                            <constraint firstItem="WoJ-qV-QsV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="R5g-JF-Msj"/>
+                            <constraint firstItem="WoJ-qV-QsV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="R5g-JF-Msj"/>
+                            <constraint firstItem="cSJ-ha-6gt" firstAttribute="trailing" secondItem="WoJ-qV-QsV" secondAttribute="trailing" constant="-30" id="zRd-UQ-qNH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
