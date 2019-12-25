@@ -16,6 +16,7 @@
 		F82BA3BE23B1E6B90016F0F6 /* MovieCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3BD23B1E6B90016F0F6 /* MovieCollectionCell.swift */; };
 		F82BA3C023B1E6CD0016F0F6 /* MovieCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F82BA3BF23B1E6CD0016F0F6 /* MovieCollectionCell.xib */; };
 		F82BA3C623B1FAC40016F0F6 /* UIImageView+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3C523B1FAC40016F0F6 /* UIImageView+Networking.swift */; };
+		F82BA3C823B3421E0016F0F6 /* UILabel+RatingStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3C723B3421E0016F0F6 /* UILabel+RatingStars.swift */; };
 		F834B8BC23A8533300DA85D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834B8BB23A8533300DA85D2 /* AppDelegate.swift */; };
 		F834B8BE23A8533300DA85D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834B8BD23A8533300DA85D2 /* SceneDelegate.swift */; };
 		F834B8C023A8533300DA85D2 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834B8BF23A8533300DA85D2 /* HomePageViewController.swift */; };
@@ -36,6 +37,7 @@
 		F82BA3BD23B1E6B90016F0F6 /* MovieCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionCell.swift; sourceTree = "<group>"; };
 		F82BA3BF23B1E6CD0016F0F6 /* MovieCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionCell.xib; sourceTree = "<group>"; };
 		F82BA3C523B1FAC40016F0F6 /* UIImageView+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Networking.swift"; sourceTree = "<group>"; };
+		F82BA3C723B3421E0016F0F6 /* UILabel+RatingStars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+RatingStars.swift"; sourceTree = "<group>"; };
 		F834B8B823A8533300DA85D2 /* ios-theater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-theater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F834B8BB23A8533300DA85D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F834B8BD23A8533300DA85D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		F82BA3B023B0BAF60016F0F6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F82BA3C723B3421E0016F0F6 /* UILabel+RatingStars.swift */,
 				F82BA3B123B0BB0F0016F0F6 /* NetworkClient.swift */,
 				F82BA3C523B1FAC40016F0F6 /* UIImageView+Networking.swift */,
 			);
@@ -276,6 +279,7 @@
 				F82BA3B423B0C0EB0016F0F6 /* MoviesViewModel.swift in Sources */,
 				F82BA3BE23B1E6B90016F0F6 /* MovieCollectionCell.swift in Sources */,
 				F82BA3B223B0BB0F0016F0F6 /* NetworkClient.swift in Sources */,
+				F82BA3C823B3421E0016F0F6 /* UILabel+RatingStars.swift in Sources */,
 				F82BA3A423AA1CCE0016F0F6 /* BannerCell.swift in Sources */,
 				F82BA3C623B1FAC40016F0F6 /* UIImageView+Networking.swift in Sources */,
 				F82BA3BA23B0C54A0016F0F6 /* Rating.swift in Sources */,
