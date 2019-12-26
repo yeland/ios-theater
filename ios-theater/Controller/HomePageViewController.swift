@@ -105,7 +105,7 @@ extension HomePageViewController: UICollectionViewDelegateFlowLayout {
     if collectionView == self.bannerCollectionView {
       return CGSize(width: view.bounds.width, height: collectionView.bounds.height)
     } else {
-      return CGSize(width: 124, height: 240)
+      return CGSize(width: 117, height: 240)
     }
   }
 }
