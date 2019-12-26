@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y1A-ru-TMc" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="865"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WoJ-qV-QsV">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="301"/>
@@ -97,6 +97,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="19B-tq-wk0" firstAttribute="leading" secondItem="y1A-ru-TMc" secondAttribute="leading" id="C4T-ST-c6p"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Pbj-eC-qYN" secondAttribute="trailing" constant="322" id="FXL-rT-5sJ"/>
                                             <constraint firstItem="WoJ-qV-QsV" firstAttribute="leading" secondItem="y1A-ru-TMc" secondAttribute="leading" id="Hpr-fi-cMp"/>
                                             <constraint firstItem="cSJ-ha-6gt" firstAttribute="trailing" secondItem="WoJ-qV-QsV" secondAttribute="trailing" constant="-30" id="Lax-iD-j0B"/>
                                             <constraint firstItem="WoJ-qV-QsV" firstAttribute="top" secondItem="y1A-ru-TMc" secondAttribute="top" id="Lej-pT-66o"/>
@@ -106,16 +107,15 @@
                                             <constraint firstItem="19B-tq-wk0" firstAttribute="top" secondItem="Pbj-eC-qYN" secondAttribute="bottom" constant="15" id="X73-NX-No8"/>
                                             <constraint firstItem="Pbj-eC-qYN" firstAttribute="leading" secondItem="y1A-ru-TMc" secondAttribute="leading" constant="10" id="ajM-ek-jdf"/>
                                             <constraint firstItem="cSJ-ha-6gt" firstAttribute="bottom" secondItem="WoJ-qV-QsV" secondAttribute="bottom" constant="-5" id="bX8-vj-Sj0"/>
+                                            <constraint firstAttribute="bottom" secondItem="19B-tq-wk0" secondAttribute="bottom" id="uhX-pN-NSl"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="y1A-ru-TMc" secondAttribute="bottom" constant="200" id="0uz-Y7-g6l"/>
+                                    <constraint firstAttribute="bottom" secondItem="y1A-ru-TMc" secondAttribute="bottom" id="0uz-Y7-g6l"/>
                                     <constraint firstItem="y1A-ru-TMc" firstAttribute="leading" secondItem="SoQ-kZ-3pc" secondAttribute="leading" id="Gx7-IA-yhW"/>
                                     <constraint firstItem="y1A-ru-TMc" firstAttribute="top" secondItem="SoQ-kZ-3pc" secondAttribute="top" id="QGi-dM-JX4"/>
-                                    <constraint firstItem="y1A-ru-TMc" firstAttribute="centerY" secondItem="SoQ-kZ-3pc" secondAttribute="centerY" id="uHv-Tb-VQD"/>
                                     <constraint firstAttribute="trailing" secondItem="y1A-ru-TMc" secondAttribute="trailing" id="vD3-Gc-gsn"/>
-                                    <constraint firstItem="y1A-ru-TMc" firstAttribute="centerX" secondItem="SoQ-kZ-3pc" secondAttribute="centerX" id="xpY-wm-PEn"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -124,6 +124,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SoQ-kZ-3pc" secondAttribute="trailing" id="1Z6-Th-LDD"/>
                             <constraint firstItem="SoQ-kZ-3pc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IYf-YA-M6W"/>
                             <constraint firstItem="SoQ-kZ-3pc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bwU-dg-yRA"/>
+                            <constraint firstItem="y1A-ru-TMc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="dRH-Mp-2bA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SoQ-kZ-3pc" secondAttribute="bottom" id="vyG-pY-Suq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
