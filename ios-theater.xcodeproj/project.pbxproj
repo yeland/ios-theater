@@ -17,6 +17,11 @@
 		F82BA3C023B1E6CD0016F0F6 /* MovieCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F82BA3BF23B1E6CD0016F0F6 /* MovieCollectionCell.xib */; };
 		F82BA3C623B1FAC40016F0F6 /* UIImageView+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3C523B1FAC40016F0F6 /* UIImageView+Networking.swift */; };
 		F82BA3C823B3421E0016F0F6 /* UILabel+RatingStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3C723B3421E0016F0F6 /* UILabel+RatingStars.swift */; };
+		F82BA3D023B5AE1E0016F0F6 /* BannerCollectionViewDatasourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3CF23B5AE1E0016F0F6 /* BannerCollectionViewDatasourse.swift */; };
+		F82BA3D223B5B0820016F0F6 /* BannerCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3D123B5B0820016F0F6 /* BannerCollectionViewDelegate.swift */; };
+		F82BA3D423B5D0610016F0F6 /* HomePageViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3D323B5D0610016F0F6 /* HomePageViewControllerDelegate.swift */; };
+		F82BA3D623B5D4AD0016F0F6 /* HotMoviesCollectionViewDatasourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3D523B5D4AD0016F0F6 /* HotMoviesCollectionViewDatasourse.swift */; };
+		F82BA3D823B5D78D0016F0F6 /* HotMoviesCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3D723B5D78D0016F0F6 /* HotMoviesCollectionViewDelegate.swift */; };
 		F834B8BC23A8533300DA85D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834B8BB23A8533300DA85D2 /* AppDelegate.swift */; };
 		F834B8BE23A8533300DA85D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834B8BD23A8533300DA85D2 /* SceneDelegate.swift */; };
 		F834B8C023A8533300DA85D2 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834B8BF23A8533300DA85D2 /* HomePageViewController.swift */; };
@@ -40,6 +45,11 @@
 		F82BA3C723B3421E0016F0F6 /* UILabel+RatingStars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+RatingStars.swift"; sourceTree = "<group>"; };
 		F82BA3CB23B48CFA0016F0F6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		F82BA3CE23B491F60016F0F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		F82BA3CF23B5AE1E0016F0F6 /* BannerCollectionViewDatasourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewDatasourse.swift; sourceTree = "<group>"; };
+		F82BA3D123B5B0820016F0F6 /* BannerCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		F82BA3D323B5D0610016F0F6 /* HomePageViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewControllerDelegate.swift; sourceTree = "<group>"; };
+		F82BA3D523B5D4AD0016F0F6 /* HotMoviesCollectionViewDatasourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotMoviesCollectionViewDatasourse.swift; sourceTree = "<group>"; };
+		F82BA3D723B5D78D0016F0F6 /* HotMoviesCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotMoviesCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		F834B8B823A8533300DA85D2 /* ios-theater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-theater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F834B8BB23A8533300DA85D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F834B8BD23A8533300DA85D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +97,19 @@
 				F82BA3C523B1FAC40016F0F6 /* UIImageView+Networking.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		F82BA3D923B5DE7D0016F0F6 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				F834B8BF23A8533300DA85D2 /* HomePageViewController.swift */,
+				F82BA3D323B5D0610016F0F6 /* HomePageViewControllerDelegate.swift */,
+				F82BA3CF23B5AE1E0016F0F6 /* BannerCollectionViewDatasourse.swift */,
+				F82BA3D123B5B0820016F0F6 /* BannerCollectionViewDelegate.swift */,
+				F82BA3D523B5D4AD0016F0F6 /* HotMoviesCollectionViewDatasourse.swift */,
+				F82BA3D723B5D78D0016F0F6 /* HotMoviesCollectionViewDelegate.swift */,
+			);
+			path = HomePage;
 			sourceTree = "<group>";
 		};
 		F834B8AF23A8533300DA85D2 = {
@@ -137,7 +160,7 @@
 		F834B8D023A8658600DA85D2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F834B8BF23A8533300DA85D2 /* HomePageViewController.swift */,
+				F82BA3D923B5DE7D0016F0F6 /* HomePage */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -277,17 +300,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F82BA3D823B5D78D0016F0F6 /* HotMoviesCollectionViewDelegate.swift in Sources */,
 				F834B8C023A8533300DA85D2 /* HomePageViewController.swift in Sources */,
 				F82BA3B823B0C42F0016F0F6 /* Movies.swift in Sources */,
 				F82BA3B423B0C0EB0016F0F6 /* MoviesViewModel.swift in Sources */,
+				F82BA3D423B5D0610016F0F6 /* HomePageViewControllerDelegate.swift in Sources */,
 				F82BA3BE23B1E6B90016F0F6 /* MovieCollectionCell.swift in Sources */,
 				F82BA3B223B0BB0F0016F0F6 /* NetworkClient.swift in Sources */,
 				F82BA3C823B3421E0016F0F6 /* UILabel+RatingStars.swift in Sources */,
 				F82BA3A423AA1CCE0016F0F6 /* BannerCell.swift in Sources */,
 				F82BA3C623B1FAC40016F0F6 /* UIImageView+Networking.swift in Sources */,
 				F82BA3BA23B0C54A0016F0F6 /* Rating.swift in Sources */,
+				F82BA3D623B5D4AD0016F0F6 /* HotMoviesCollectionViewDatasourse.swift in Sources */,
 				F834B8BC23A8533300DA85D2 /* AppDelegate.swift in Sources */,
 				F834B8BE23A8533300DA85D2 /* SceneDelegate.swift in Sources */,
+				F82BA3D223B5B0820016F0F6 /* BannerCollectionViewDelegate.swift in Sources */,
+				F82BA3D023B5AE1E0016F0F6 /* BannerCollectionViewDatasourse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
