@@ -22,6 +22,7 @@
 		F82BA3D423B5D0610016F0F6 /* HomePageViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3D323B5D0610016F0F6 /* HomePageViewControllerDelegate.swift */; };
 		F82BA3D623B5D4AD0016F0F6 /* HotMoviesCollectionViewDatasourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3D523B5D4AD0016F0F6 /* HotMoviesCollectionViewDatasourse.swift */; };
 		F82BA3D823B5D78D0016F0F6 /* HotMoviesCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3D723B5D78D0016F0F6 /* HotMoviesCollectionViewDelegate.swift */; };
+		F82BA3DC23B5F95D0016F0F6 /* HotMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3DB23B5F95D0016F0F6 /* HotMoviesViewController.swift */; };
 		F834B8BC23A8533300DA85D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834B8BB23A8533300DA85D2 /* AppDelegate.swift */; };
 		F834B8BE23A8533300DA85D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834B8BD23A8533300DA85D2 /* SceneDelegate.swift */; };
 		F834B8C023A8533300DA85D2 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834B8BF23A8533300DA85D2 /* HomePageViewController.swift */; };
@@ -50,6 +51,7 @@
 		F82BA3D323B5D0610016F0F6 /* HomePageViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewControllerDelegate.swift; sourceTree = "<group>"; };
 		F82BA3D523B5D4AD0016F0F6 /* HotMoviesCollectionViewDatasourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotMoviesCollectionViewDatasourse.swift; sourceTree = "<group>"; };
 		F82BA3D723B5D78D0016F0F6 /* HotMoviesCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotMoviesCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		F82BA3DB23B5F95D0016F0F6 /* HotMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotMoviesViewController.swift; sourceTree = "<group>"; };
 		F834B8B823A8533300DA85D2 /* ios-theater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-theater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F834B8BB23A8533300DA85D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F834B8BD23A8533300DA85D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,14 @@
 			path = HomePage;
 			sourceTree = "<group>";
 		};
+		F82BA3DA23B5F8F40016F0F6 /* HotMoviesPage */ = {
+			isa = PBXGroup;
+			children = (
+				F82BA3DB23B5F95D0016F0F6 /* HotMoviesViewController.swift */,
+			);
+			path = HotMoviesPage;
+			sourceTree = "<group>";
+		};
 		F834B8AF23A8533300DA85D2 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +170,7 @@
 		F834B8D023A8658600DA85D2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F82BA3DA23B5F8F40016F0F6 /* HotMoviesPage */,
 				F82BA3D923B5DE7D0016F0F6 /* HomePage */,
 			);
 			path = Controller;
@@ -302,6 +313,7 @@
 			files = (
 				F82BA3D823B5D78D0016F0F6 /* HotMoviesCollectionViewDelegate.swift in Sources */,
 				F834B8C023A8533300DA85D2 /* HomePageViewController.swift in Sources */,
+				F82BA3DC23B5F95D0016F0F6 /* HotMoviesViewController.swift in Sources */,
 				F82BA3B823B0C42F0016F0F6 /* Movies.swift in Sources */,
 				F82BA3B423B0C0EB0016F0F6 /* MoviesViewModel.swift in Sources */,
 				F82BA3D423B5D0610016F0F6 /* HomePageViewControllerDelegate.swift in Sources */,

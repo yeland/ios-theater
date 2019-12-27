@@ -49,6 +49,10 @@ class HomePageViewController: UIViewController, HomePageViewControllerDelegate {
     hotMoviesCollectionView.delegate = hotMoviesCollectionViewDelegate
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    navigationController?.navigationBar.isHidden = true
+  }
+  
   override func viewDidAppear(_ animated: Bool) {
     addTimer()
   }
