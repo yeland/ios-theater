@@ -9,6 +9,7 @@
 import Foundation
 
 class MoviesViewModel {
+  var total = 0
   var hotMovies: [Movie] = []
   
   private let networkClient = NetworkClient()
@@ -22,6 +23,7 @@ class MoviesViewModel {
         do {
           let movies = try JSONDecoder().decode(Movies.self, from: data)
           self?.hotMovies = movies.subjects
+          self?.total = movies.total
           completion()
         } catch let error {
           print(error.localizedDescription)

@@ -12,6 +12,7 @@ class HomePageViewController: UIViewController, HomePageViewControllerDelegate {
   @IBOutlet weak var bannerCollectionView: UICollectionView!
   @IBOutlet weak var pageControl: UIPageControl!
   @IBOutlet weak var hotMoviesCollectionView: UICollectionView!
+  @IBOutlet weak var allButton: UIButton!
   
   private var bannerCollectionViewDatasourse: BannerCollectionViewDatasourse?
   private var bannerCollectionViewDelegate: BannerCollectionViewDelegate?
@@ -55,6 +56,7 @@ class HomePageViewController: UIViewController, HomePageViewControllerDelegate {
   private func fetchData() {
     moviesViewModel.fetchHotMovies() {
       self.hotMoviesCollectionViewDatasourse?.setHotMovies(withHotMovies: self.moviesViewModel.hotMovies)
+      self.allButton.setTitle("全部\(self.moviesViewModel.total)", for: .normal)
       self.hotMoviesCollectionView.reloadData()
     }
   }

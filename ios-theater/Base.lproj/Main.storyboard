@@ -80,24 +80,35 @@
                                                 <cells/>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="热门电影" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbj-eC-qYN">
-                                                <rect key="frame" x="10" y="326" width="82" height="24"/>
+                                                <rect key="frame" x="12" y="326" width="82" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="YBq-5Z-FKI">
+                                                <rect key="frame" x="349" y="329" width="50" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="       " image="chevron.left" catalog="system">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="YBq-5Z-FKI" secondAttribute="trailing" constant="15" id="68b-Pr-wLt"/>
                                             <constraint firstItem="19B-tq-wk0" firstAttribute="leading" secondItem="y1A-ru-TMc" secondAttribute="leading" id="C4T-ST-c6p"/>
-                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Pbj-eC-qYN" secondAttribute="trailing" constant="322" id="FXL-rT-5sJ"/>
                                             <constraint firstItem="WoJ-qV-QsV" firstAttribute="leading" secondItem="y1A-ru-TMc" secondAttribute="leading" id="Hpr-fi-cMp"/>
                                             <constraint firstItem="cSJ-ha-6gt" firstAttribute="trailing" secondItem="WoJ-qV-QsV" secondAttribute="trailing" constant="-30" id="Lax-iD-j0B"/>
                                             <constraint firstItem="WoJ-qV-QsV" firstAttribute="top" secondItem="y1A-ru-TMc" secondAttribute="top" id="Lej-pT-66o"/>
                                             <constraint firstItem="WoJ-qV-QsV" firstAttribute="trailing" secondItem="y1A-ru-TMc" secondAttribute="trailing" id="Pb4-RE-o0s"/>
                                             <constraint firstAttribute="trailing" secondItem="19B-tq-wk0" secondAttribute="trailing" id="Rs9-o2-wOF"/>
                                             <constraint firstItem="Pbj-eC-qYN" firstAttribute="top" secondItem="WoJ-qV-QsV" secondAttribute="bottom" constant="25" id="T3e-av-e4f"/>
+                                            <constraint firstItem="YBq-5Z-FKI" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Pbj-eC-qYN" secondAttribute="trailing" constant="255" id="WYc-tR-QJU"/>
                                             <constraint firstItem="19B-tq-wk0" firstAttribute="top" secondItem="Pbj-eC-qYN" secondAttribute="bottom" constant="15" id="X73-NX-No8"/>
-                                            <constraint firstItem="Pbj-eC-qYN" firstAttribute="leading" secondItem="y1A-ru-TMc" secondAttribute="leading" constant="10" id="ajM-ek-jdf"/>
+                                            <constraint firstItem="YBq-5Z-FKI" firstAttribute="centerY" secondItem="Pbj-eC-qYN" secondAttribute="centerY" id="af4-oy-i1S"/>
+                                            <constraint firstItem="Pbj-eC-qYN" firstAttribute="leading" secondItem="y1A-ru-TMc" secondAttribute="leading" constant="12" id="ajM-ek-jdf"/>
                                             <constraint firstItem="cSJ-ha-6gt" firstAttribute="bottom" secondItem="WoJ-qV-QsV" secondAttribute="bottom" constant="-5" id="bX8-vj-Sj0"/>
                                             <constraint firstAttribute="bottom" secondItem="19B-tq-wk0" secondAttribute="bottom" id="uhX-pN-NSl"/>
                                         </constraints>
@@ -123,6 +134,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ajs-pr-aZQ"/>
                     <connections>
+                        <outlet property="allButton" destination="YBq-5Z-FKI" id="hUx-rb-dH7"/>
                         <outlet property="bannerCollectionView" destination="WoJ-qV-QsV" id="ff5-Yv-Tc2"/>
                         <outlet property="hotMoviesCollectionView" destination="19B-tq-wk0" id="Jms-5L-cNL"/>
                         <outlet property="pageControl" destination="cSJ-ha-6gt" id="D3y-ih-Vzf"/>
@@ -153,5 +165,6 @@
     </scenes>
     <resources>
         <image name="banner1" width="2502" height="1620"/>
+        <image name="chevron.left" catalog="system" width="48" height="64"/>
     </resources>
 </document>

@@ -16,6 +16,7 @@ class MovieCollectionCell: UICollectionViewCell {
   func configure(movie: Movie) {
     guard let url = URL(string: movie.images.large) else { return }
     self.postImage.setImage(withURL: url)
+    self.postImage.layer.cornerRadius = 5
     self.nameLabel.text = movie.title
     setupRatingLabel(rating: movie.rating.average)
   }
