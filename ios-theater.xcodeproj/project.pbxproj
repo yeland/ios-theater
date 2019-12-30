@@ -23,6 +23,8 @@
 		F82BA3D623B5D4AD0016F0F6 /* HotMoviesCollectionViewDatasourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3D523B5D4AD0016F0F6 /* HotMoviesCollectionViewDatasourse.swift */; };
 		F82BA3D823B5D78D0016F0F6 /* HotMoviesCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3D723B5D78D0016F0F6 /* HotMoviesCollectionViewDelegate.swift */; };
 		F82BA3DC23B5F95D0016F0F6 /* HotMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3DB23B5F95D0016F0F6 /* HotMoviesViewController.swift */; };
+		F82BA3DE23B5FDEE0016F0F6 /* MovieTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3DD23B5FDEE0016F0F6 /* MovieTableCell.swift */; };
+		F82BA3E023B5FE180016F0F6 /* MovieTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F82BA3DF23B5FE180016F0F6 /* MovieTableCell.xib */; };
 		F834B8BC23A8533300DA85D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834B8BB23A8533300DA85D2 /* AppDelegate.swift */; };
 		F834B8BE23A8533300DA85D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834B8BD23A8533300DA85D2 /* SceneDelegate.swift */; };
 		F834B8C023A8533300DA85D2 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834B8BF23A8533300DA85D2 /* HomePageViewController.swift */; };
@@ -52,6 +54,8 @@
 		F82BA3D523B5D4AD0016F0F6 /* HotMoviesCollectionViewDatasourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotMoviesCollectionViewDatasourse.swift; sourceTree = "<group>"; };
 		F82BA3D723B5D78D0016F0F6 /* HotMoviesCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotMoviesCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		F82BA3DB23B5F95D0016F0F6 /* HotMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotMoviesViewController.swift; sourceTree = "<group>"; };
+		F82BA3DD23B5FDEE0016F0F6 /* MovieTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableCell.swift; sourceTree = "<group>"; };
+		F82BA3DF23B5FE180016F0F6 /* MovieTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableCell.xib; sourceTree = "<group>"; };
 		F834B8B823A8533300DA85D2 /* ios-theater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-theater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F834B8BB23A8533300DA85D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F834B8BD23A8533300DA85D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +194,8 @@
 				F82BA3A323AA1CCE0016F0F6 /* BannerCell.swift */,
 				F82BA3BD23B1E6B90016F0F6 /* MovieCollectionCell.swift */,
 				F82BA3BF23B1E6CD0016F0F6 /* MovieCollectionCell.xib */,
+				F82BA3DD23B5FDEE0016F0F6 /* MovieTableCell.swift */,
+				F82BA3DF23B5FE180016F0F6 /* MovieTableCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -255,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F82BA3E023B5FE180016F0F6 /* MovieTableCell.xib in Resources */,
 				F82BA3C023B1E6CD0016F0F6 /* MovieCollectionCell.xib in Resources */,
 				F834B8C823A8533700DA85D2 /* LaunchScreen.storyboard in Resources */,
 				F834B8C523A8533700DA85D2 /* Assets.xcassets in Resources */,
@@ -316,6 +323,7 @@
 				F82BA3DC23B5F95D0016F0F6 /* HotMoviesViewController.swift in Sources */,
 				F82BA3B823B0C42F0016F0F6 /* Movies.swift in Sources */,
 				F82BA3B423B0C0EB0016F0F6 /* MoviesViewModel.swift in Sources */,
+				F82BA3DE23B5FDEE0016F0F6 /* MovieTableCell.swift in Sources */,
 				F82BA3D423B5D0610016F0F6 /* HomePageViewControllerDelegate.swift in Sources */,
 				F82BA3BE23B1E6B90016F0F6 /* MovieCollectionCell.swift in Sources */,
 				F82BA3B223B0BB0F0016F0F6 /* NetworkClient.swift in Sources */,

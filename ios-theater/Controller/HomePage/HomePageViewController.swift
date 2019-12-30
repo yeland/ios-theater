@@ -49,6 +49,12 @@ class HomePageViewController: UIViewController, HomePageViewControllerDelegate {
     hotMoviesCollectionView.delegate = hotMoviesCollectionViewDelegate
   }
   
+  @IBAction func clickToShowAll(_ sender: UIButton) {
+    let hotMoviesViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "HotMoviesViewController") as HotMoviesViewController
+    hotMoviesViewController.configure(with: moviesViewModel)
+    show(hotMoviesViewController, sender: self)
+  }
+  
   override func viewWillAppear(_ animated: Bool) {
     navigationController?.navigationBar.isHidden = true
   }
