@@ -51,7 +51,6 @@ class HomePageViewController: UIViewController, HomePageViewControllerDelegate {
   
   @IBAction func clickToShowAll(_ sender: UIButton) {
     let hotMoviesViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "HotMoviesViewController") as HotMoviesViewController
-    hotMoviesViewController.configure(with: moviesViewModel)
     show(hotMoviesViewController, sender: self)
   }
   
@@ -64,7 +63,7 @@ class HomePageViewController: UIViewController, HomePageViewControllerDelegate {
   }
   
   private func fetchData() {
-    moviesViewModel.fetchHotMovies() {
+    moviesViewModel.fetchHotMovies(start: 0, count: 6) {
       self.hotMoviesCollectionViewDatasourse?.setHotMovies(withHotMovies: self.moviesViewModel.hotMovies)
       self.allButton.setTitle("全部\(self.moviesViewModel.total)", for: .normal)
       self.hotMoviesCollectionView.reloadData()

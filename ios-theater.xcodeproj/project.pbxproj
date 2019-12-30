@@ -31,6 +31,8 @@
 		F834B8C323A8533300DA85D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F834B8C123A8533300DA85D2 /* Main.storyboard */; };
 		F834B8C523A8533700DA85D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F834B8C423A8533700DA85D2 /* Assets.xcassets */; };
 		F834B8C823A8533700DA85D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F834B8C623A8533700DA85D2 /* LaunchScreen.storyboard */; };
+		F87771DE23B9D666003FC138 /* HotMoviesFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87771DD23B9D666003FC138 /* HotMoviesFooter.swift */; };
+		F87771E023B9DA86003FC138 /* HotMoviesFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = F87771DF23B9DA86003FC138 /* HotMoviesFooter.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		F834B8C423A8533700DA85D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F834B8C723A8533700DA85D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F834B8C923A8533700DA85D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F87771DD23B9D666003FC138 /* HotMoviesFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotMoviesFooter.swift; sourceTree = "<group>"; };
+		F87771DF23B9DA86003FC138 /* HotMoviesFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotMoviesFooter.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +200,8 @@
 				F82BA3BF23B1E6CD0016F0F6 /* MovieCollectionCell.xib */,
 				F82BA3DD23B5FDEE0016F0F6 /* MovieTableCell.swift */,
 				F82BA3DF23B5FE180016F0F6 /* MovieTableCell.xib */,
+				F87771DF23B9DA86003FC138 /* HotMoviesFooter.xib */,
+				F87771DD23B9D666003FC138 /* HotMoviesFooter.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -262,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F82BA3E023B5FE180016F0F6 /* MovieTableCell.xib in Resources */,
+				F87771E023B9DA86003FC138 /* HotMoviesFooter.xib in Resources */,
 				F82BA3C023B1E6CD0016F0F6 /* MovieCollectionCell.xib in Resources */,
 				F834B8C823A8533700DA85D2 /* LaunchScreen.storyboard in Resources */,
 				F834B8C523A8533700DA85D2 /* Assets.xcassets in Resources */,
@@ -322,6 +329,7 @@
 				F834B8C023A8533300DA85D2 /* HomePageViewController.swift in Sources */,
 				F82BA3DC23B5F95D0016F0F6 /* HotMoviesViewController.swift in Sources */,
 				F82BA3B823B0C42F0016F0F6 /* Movies.swift in Sources */,
+				F87771DE23B9D666003FC138 /* HotMoviesFooter.swift in Sources */,
 				F82BA3B423B0C0EB0016F0F6 /* MoviesViewModel.swift in Sources */,
 				F82BA3DE23B5FDEE0016F0F6 /* MovieTableCell.swift in Sources */,
 				F82BA3D423B5D0610016F0F6 /* HomePageViewControllerDelegate.swift in Sources */,

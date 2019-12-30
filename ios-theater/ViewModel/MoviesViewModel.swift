@@ -16,13 +16,13 @@ class MoviesViewModel {
   
   private let hotMoviesAPI = "https://api.douban.com/v2/movie/in_theaters?apikey=0df993c66c0c636e29ecbb5344252a4a"
   
-  func fetchHotMovies(completion: @escaping () -> Void) {
-    guard let url = URL(string: hotMoviesAPI) else { return }
+  func fetchHotMovies(start: Int, count: Int, completion: @escaping () -> Void) {
+    guard let url = URL(string: "\(hotMoviesAPI)&start=\(start)&count=\(count)") else { return }
     networkClient.request(url: url) { [weak self] data, error in
       if let data = data {
         do {
           let movies = try JSONDecoder().decode(Movies.self, from: data)
-          self?.hotMovies = movies.subjects
+          self?.hotMovies += movies.subjects
           self?.total = movies.total
           completion()
         } catch let error {
@@ -34,5 +34,9 @@ class MoviesViewModel {
         print(error.localizedDescription)
       }
     }
+  }
+  
+  var allHotMoviesLoaded: Bool {
+    return hotMovies.count == total
   }
 }
