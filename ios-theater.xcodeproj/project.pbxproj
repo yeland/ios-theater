@@ -33,6 +33,7 @@
 		F834B8C823A8533700DA85D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F834B8C623A8533700DA85D2 /* LaunchScreen.storyboard */; };
 		F87771DE23B9D666003FC138 /* HotMoviesFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87771DD23B9D666003FC138 /* HotMoviesFooter.swift */; };
 		F87771E023B9DA86003FC138 /* HotMoviesFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = F87771DF23B9DA86003FC138 /* HotMoviesFooter.xib */; };
+		F87771E323B9FAAB003FC138 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F87771E523B9FAAB003FC138 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,8 @@
 		F834B8C923A8533700DA85D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F87771DD23B9D666003FC138 /* HotMoviesFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotMoviesFooter.swift; sourceTree = "<group>"; };
 		F87771DF23B9DA86003FC138 /* HotMoviesFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotMoviesFooter.xib; sourceTree = "<group>"; };
+		F87771E423B9FAAB003FC138 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F87771E623B9FAB0003FC138 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,7 @@
 				F834B8C123A8533300DA85D2 /* Main.storyboard */,
 				F834B8C423A8533700DA85D2 /* Assets.xcassets */,
 				F834B8C623A8533700DA85D2 /* LaunchScreen.storyboard */,
+				F87771E523B9FAAB003FC138 /* Localizable.strings */,
 				F834B8C923A8533700DA85D2 /* Info.plist */,
 			);
 			path = "ios-theater";
@@ -270,6 +274,7 @@
 				F82BA3E023B5FE180016F0F6 /* MovieTableCell.xib in Resources */,
 				F87771E023B9DA86003FC138 /* HotMoviesFooter.xib in Resources */,
 				F82BA3C023B1E6CD0016F0F6 /* MovieCollectionCell.xib in Resources */,
+				F87771E323B9FAAB003FC138 /* Localizable.strings in Resources */,
 				F834B8C823A8533700DA85D2 /* LaunchScreen.storyboard in Resources */,
 				F834B8C523A8533700DA85D2 /* Assets.xcassets in Resources */,
 				F834B8C323A8533300DA85D2 /* Main.storyboard in Resources */,
@@ -366,6 +371,15 @@
 				F834B8C723A8533700DA85D2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F87771E523B9FAAB003FC138 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F87771E423B9FAAB003FC138 /* en */,
+				F87771E623B9FAB0003FC138 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

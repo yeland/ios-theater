@@ -65,7 +65,8 @@ class HomePageViewController: UIViewController, HomePageViewControllerDelegate {
   private func fetchData() {
     moviesViewModel.fetchHotMovies(start: 0, count: 6) {
       self.hotMoviesCollectionViewDatasourse?.setHotMovies(withHotMovies: self.moviesViewModel.hotMovies)
-      self.allButton.setTitle("全部\(self.moviesViewModel.total)", for: .normal)
+      let allString = NSLocalizedString("allString", comment: "")
+      self.allButton.setTitle("\(allString) \(self.moviesViewModel.total)", for: .normal)
       self.hotMoviesCollectionView.reloadData()
     }
   }

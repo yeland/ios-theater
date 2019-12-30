@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  ios-theater
+
+  Created by Linxiao Wei on 2019/12/30.
+  Copyright © 2019 Linxiao Wei. All rights reserved.
+*/
+
+"allString" = "All";
+"hotMoviesTitle" = "Hot Movies";

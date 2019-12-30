@@ -15,7 +15,8 @@ class HotMoviesViewController: UITableViewController {
   
   override func viewDidLoad() {
     navigationController?.navigationBar.isHidden = false
-    self.title = "热门电影"
+    let title = NSLocalizedString("hotMoviesTitle", comment: "")
+    self.title = title
     tableView.register(UINib(nibName: "MovieTableCell", bundle: nil), forCellReuseIdentifier: "MovieTableCell")
     tableView.dataSource = self
     tableView.delegate = self
