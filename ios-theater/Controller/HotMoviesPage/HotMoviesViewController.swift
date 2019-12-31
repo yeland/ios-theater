@@ -69,4 +69,10 @@ extension HotMoviesViewController {
       hotMoviesFooter.endLabel.isHidden = true
     }
   }
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let movieDetailsViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MovieDetailsViewController") as MovieDetailsViewController
+    movieDetailsViewController.configure(withMovieId: moviesViewModel.hotMovies[indexPath.row].id)
+    show(movieDetailsViewController, sender: self)
+  }
 }

@@ -161,6 +161,21 @@
             </objects>
             <point key="canvasLocation" x="1970" y="134"/>
         </scene>
+        <!--Movie Details View Controller-->
+        <scene sceneID="y86-K2-4ly">
+            <objects>
+                <viewController storyboardIdentifier="MovieDetailsViewController" id="I2s-5r-Wza" customClass="MovieDetailsViewController" customModule="ios_theater" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xA1-c8-zmD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="VKG-Ky-15j"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u7O-aU-Im9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2854" y="134"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="zae-h5-eQa">
             <objects>
