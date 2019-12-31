@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE END" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TER-zA-SzF">
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE END" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TER-zA-SzF">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -23,7 +23,7 @@
                     <color key="textColor" red="0.8549770163" green="0.84966660000000005" blue="0.86028743249999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="oBA-a1-Mdf">
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="oBA-a1-Mdf">
                     <rect key="frame" x="197" y="10" width="20" height="20"/>
                 </activityIndicatorView>
             </subviews>
@@ -40,7 +40,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="endLabel" destination="TER-zA-SzF" id="T4C-4L-mjZ"/>
-                <outlet property="indicater" destination="oBA-a1-Mdf" id="fEy-qY-ZJ4"/>
+                <outlet property="loadingIndicater" destination="oBA-a1-Mdf" id="fEy-qY-ZJ4"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="420.20089285714283"/>
         </view>

@@ -23,7 +23,6 @@ class HotMoviesViewController: UITableViewController {
     fetchData()
     hotMoviesFooter = Bundle.main.loadNibNamed("HotMoviesFooter", owner: nil, options: nil)?.first as! HotMoviesFooter
     tableView.tableFooterView = hotMoviesFooter
-    hotMoviesFooter.configure()
   }
   
   private func fetchData() {
@@ -63,10 +62,10 @@ extension HotMoviesViewController {
   
   override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     if moviesViewModel.allHotMoviesLoaded {
-      hotMoviesFooter.indicater.isHidden = true
+      hotMoviesFooter.loadingIndicater.isHidden = true
       hotMoviesFooter.endLabel.isHidden = false
     } else {
-      hotMoviesFooter.indicater.isHidden = false
+      hotMoviesFooter.loadingIndicater.isHidden = false
       hotMoviesFooter.endLabel.isHidden = true
     }
   }

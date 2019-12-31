@@ -9,11 +9,6 @@
 import UIKit
 
 class HotMoviesFooter: UITableViewHeaderFooterView {
-  @IBOutlet weak var indicater: UIActivityIndicatorView!
+  @IBOutlet weak var loadingIndicater: UIActivityIndicatorView!
   @IBOutlet weak var endLabel: UILabel!
-  
-  func configure() {
-    endLabel.isHidden = true
-    indicater.isHidden = true
-  }
 }
