@@ -186,9 +186,9 @@
 		F834B8D023A8658600DA85D2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F87771E723BAF4AA003FC138 /* MovieDetailsPage */,
-				F82BA3DA23B5F8F40016F0F6 /* HotMoviesPage */,
 				F82BA3D923B5DE7D0016F0F6 /* HomePage */,
+				F82BA3DA23B5F8F40016F0F6 /* HotMoviesPage */,
+				F87771E723BAF4AA003FC138 /* MovieDetailsPage */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
