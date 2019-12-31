@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="center" id="iN0-l3-epB" customClass="MovieTableCell" customModule="ios_theater" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner5" translatesAutoresizingMaskIntoConstraints="NO" id="MtZ-Si-hH5">
+                    <rect key="frame" x="15" y="10" width="100" height="140"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="CDr-ob-GYG"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我和我的祖国" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2D-8V-b4t">
+                    <rect key="frame" x="130" y="15" width="122.5" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019 / 剧情 / 陈凯歌 张一白 徐峥 管虎 薛晓路 宁浩 文牧野 / 黄渤 张译" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QmW-Cd-3PX">
+                    <rect key="frame" x="130" y="52" width="264" height="31.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mos-UV-iRF">
+                    <rect key="frame" x="324" y="100" width="60" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="A2w-tb-hwH"/>
+                        <constraint firstAttribute="height" constant="50" id="v0v-lV-2Ud"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="28"/>
+                    <color key="textColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixt-8v-cnq">
+                    <rect key="frame" x="130" y="119" width="42" height="21"/>
+                    <color key="tintColor" red="0.96907538780000002" green="0.87429432730000001" blue="0.2647887532" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="MtZ-Si-hH5" secondAttribute="bottom" constant="10" id="6Gn-W3-rC1"/>
+                <constraint firstItem="QmW-Cd-3PX" firstAttribute="top" secondItem="b2D-8V-b4t" secondAttribute="bottom" constant="13" id="6ym-h0-dJr"/>
+                <constraint firstItem="b2D-8V-b4t" firstAttribute="leading" secondItem="MtZ-Si-hH5" secondAttribute="trailing" constant="15" id="LyC-Ag-BGd"/>
+                <constraint firstItem="Mos-UV-iRF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="100" id="NPT-dE-FY7"/>
+                <constraint firstItem="ixt-8v-cnq" firstAttribute="top" secondItem="b2D-8V-b4t" secondAttribute="bottom" constant="80" id="Pf2-zJ-aks"/>
+                <constraint firstItem="ixt-8v-cnq" firstAttribute="leading" secondItem="QmW-Cd-3PX" secondAttribute="leading" id="Vuj-U4-6gK"/>
+                <constraint firstAttribute="trailing" secondItem="Mos-UV-iRF" secondAttribute="trailing" constant="30" id="W4E-Up-PoE"/>
+                <constraint firstItem="MtZ-Si-hH5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="WFc-it-5c0"/>
+                <constraint firstItem="b2D-8V-b4t" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="bJ8-Af-4aj"/>
+                <constraint firstAttribute="trailing" secondItem="QmW-Cd-3PX" secondAttribute="trailing" constant="20" id="hb0-nM-Kuc"/>
+                <constraint firstAttribute="bottom" secondItem="Mos-UV-iRF" secondAttribute="bottom" constant="10" id="jgH-hq-1eO"/>
+                <constraint firstItem="MtZ-Si-hH5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="usd-2t-xhf"/>
+                <constraint firstItem="QmW-Cd-3PX" firstAttribute="leading" secondItem="b2D-8V-b4t" secondAttribute="leading" id="xpl-aT-Dv4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="imageView" destination="MtZ-Si-hH5" id="63Z-q7-WcI"/>
+                <outlet property="infoLabel" destination="QmW-Cd-3PX" id="iM8-tL-tU1"/>
+                <outlet property="posterImage" destination="MtZ-Si-hH5" id="kA0-gt-0ZY"/>
+                <outlet property="ratingLabel" destination="Mos-UV-iRF" id="zns-mm-KoP"/>
+                <outlet property="starsLabel" destination="ixt-8v-cnq" id="l1r-Lv-Otm"/>
+                <outlet property="titleLabel" destination="b2D-8V-b4t" id="pFQ-bI-ikw"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="187.16517857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="banner5" width="2318" height="1694"/>
+    </resources>
+</document>

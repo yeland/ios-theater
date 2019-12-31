@@ -20,10 +20,19 @@ struct Movie: Codable {
   var title: String
   var images: Images
   var id: String
+  var year: String
+  var genres:[String]
+  var casts: [Person]
+  var directors: [Person]
 }
 
 struct Images: Codable {
   var small: String
   var medium: String
   var large: String
+}
+
+struct Person: Codable {
+  var avatars: Images?
+  var name: String
 }

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HotMoviesFooter" customModule="ios_theater" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE END" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TER-zA-SzF">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="neN-qB-6ou"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                    <color key="textColor" red="0.8549770163" green="0.84966660000000005" blue="0.86028743249999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="oBA-a1-Mdf">
+                    <rect key="frame" x="197" y="10" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="TER-zA-SzF" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="XFu-yB-HZh"/>
+                <constraint firstItem="oBA-a1-Mdf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ZzD-5o-cpS"/>
+                <constraint firstAttribute="bottom" secondItem="TER-zA-SzF" secondAttribute="bottom" id="ffc-xN-GX2"/>
+                <constraint firstItem="TER-zA-SzF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gww-Nf-ou1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="oBA-a1-Mdf" secondAttribute="bottom" constant="10" id="isy-hL-viv"/>
+                <constraint firstItem="TER-zA-SzF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="oaa-pp-yex"/>
+                <constraint firstItem="oBA-a1-Mdf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="zQr-CT-nm1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="endLabel" destination="TER-zA-SzF" id="T4C-4L-mjZ"/>
+                <outlet property="loadingIndicater" destination="oBA-a1-Mdf" id="fEy-qY-ZJ4"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="420.20089285714283"/>
+        </view>
+    </objects>
+</document>

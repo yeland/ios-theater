@@ -12,6 +12,7 @@ class HomePageViewController: UIViewController, HomePageViewControllerDelegate {
   @IBOutlet weak var bannerCollectionView: UICollectionView!
   @IBOutlet weak var pageControl: UIPageControl!
   @IBOutlet weak var hotMoviesCollectionView: UICollectionView!
+  @IBOutlet weak var allButton: UIButton!
   
   private var bannerCollectionViewDatasourse: BannerCollectionViewDatasourse?
   private var bannerCollectionViewDelegate: BannerCollectionViewDelegate?
@@ -48,13 +49,24 @@ class HomePageViewController: UIViewController, HomePageViewControllerDelegate {
     hotMoviesCollectionView.delegate = hotMoviesCollectionViewDelegate
   }
   
+  @IBAction func clickToShowAll(_ sender: UIButton) {
+    let hotMoviesViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "HotMoviesViewController") as HotMoviesViewController
+    show(hotMoviesViewController, sender: self)
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    navigationController?.navigationBar.isHidden = true
+  }
+  
   override func viewDidAppear(_ animated: Bool) {
     addTimer()
   }
   
   private func fetchData() {
-    moviesViewModel.fetchHotMovies() {
+    moviesViewModel.fetchHotMovies(start: 0, count: 6) {
       self.hotMoviesCollectionViewDatasourse?.setHotMovies(withHotMovies: self.moviesViewModel.hotMovies)
+      let allString = NSLocalizedString("allString", comment: "")
+      self.allButton.setTitle("\(allString) \(self.moviesViewModel.total)", for: .normal)
       self.hotMoviesCollectionView.reloadData()
     }
   }
