@@ -145,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="133.92857142857142"/>
+            <point key="canvasLocation" x="935" y="134"/>
         </scene>
         <!--Hot Movies View Controller-->
         <scene sceneID="eej-h7-ibP">
@@ -159,7 +159,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EFA-Ok-UFt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1970" y="134"/>
+            <point key="canvasLocation" x="1717" y="134"/>
         </scene>
         <!--Movie Details View Controller-->
         <scene sceneID="y86-K2-4ly">
@@ -248,7 +248,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u7O-aU-Im9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2853.6231884057975" y="133.92857142857142"/>
+            <point key="canvasLocation" x="2513" y="134"/>
+        </scene>
+        <!--Movie Info View Controller-->
+        <scene sceneID="0Vq-sJ-1IT">
+            <objects>
+                <viewController storyboardIdentifier="MovieInfoViewController" id="lLV-Uk-qhh" customClass="MovieInfoViewController" customModule="ios_theater" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W0m-fg-SkK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nH7-Mk-ong">
+                                <rect key="frame" x="30" y="76" width="40" height="35.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="KxB-F9-nDP"/>
+                                    <constraint firstAttribute="width" constant="40" id="Qth-h2-TdU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="xmark" catalog="system"/>
+                                <connections>
+                                    <action selector="clickToExit:" destination="lLV-Uk-qhh" eventType="touchUpInside" id="OXZ-zy-AQK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nH7-Mk-ong" firstAttribute="top" secondItem="W0m-fg-SkK" secondAttribute="topMargin" constant="30" id="Csh-9u-HDb"/>
+                            <constraint firstItem="nH7-Mk-ong" firstAttribute="leading" secondItem="W0m-fg-SkK" secondAttribute="leading" constant="30" id="HjQ-Se-3Go"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZyH-5Z-Nwp"/>
+                    </view>
+                    <connections>
+                        <outlet property="exitButton" destination="nH7-Mk-ong" id="ZXb-Cb-upO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lop-c2-Z7t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3282.608695652174" y="133.92857142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zae-h5-eQa">
@@ -272,5 +310,6 @@
     <resources>
         <image name="banner1" width="2502" height="1620"/>
         <image name="chevron.left" catalog="system" width="48" height="64"/>
+        <image name="xmark" catalog="system" width="64" height="56"/>
     </resources>
 </document>
