@@ -37,6 +37,8 @@
 		F87771E923BAF545003FC138 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87771E823BAF545003FC138 /* MovieDetailsViewController.swift */; };
 		F87771EB23BB223F003FC138 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87771EA23BB223F003FC138 /* MovieDetailsViewModel.swift */; };
 		F87771ED23BDC1D0003FC138 /* MovieInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87771EC23BDC1D0003FC138 /* MovieInfoViewController.swift */; };
+		F87771F123BDE741003FC138 /* MovieInfoHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F87771F023BDE741003FC138 /* MovieInfoHeader.xib */; };
+		F87771F323BDEBE9003FC138 /* MovieInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87771F223BDEBE9003FC138 /* MovieInfoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +79,8 @@
 		F87771E823BAF545003FC138 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		F87771EA23BB223F003FC138 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
 		F87771EC23BDC1D0003FC138 /* MovieInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoViewController.swift; sourceTree = "<group>"; };
+		F87771F023BDE741003FC138 /* MovieInfoHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieInfoHeader.xib; sourceTree = "<group>"; };
+		F87771F223BDEBE9003FC138 /* MovieInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +218,8 @@
 				F82BA3DF23B5FE180016F0F6 /* MovieTableCell.xib */,
 				F87771DF23B9DA86003FC138 /* HotMoviesFooter.xib */,
 				F87771DD23B9D666003FC138 /* HotMoviesFooter.swift */,
+				F87771F023BDE741003FC138 /* MovieInfoHeader.xib */,
+				F87771F223BDEBE9003FC138 /* MovieInfoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F82BA3E023B5FE180016F0F6 /* MovieTableCell.xib in Resources */,
+				F87771F123BDE741003FC138 /* MovieInfoHeader.xib in Resources */,
 				F87771E023B9DA86003FC138 /* HotMoviesFooter.xib in Resources */,
 				F82BA3C023B1E6CD0016F0F6 /* MovieCollectionCell.xib in Resources */,
 				F87771E323B9FAAB003FC138 /* Localizable.strings in Resources */,
@@ -361,6 +368,7 @@
 				F82BA3B223B0BB0F0016F0F6 /* NetworkClient.swift in Sources */,
 				F82BA3C823B3421E0016F0F6 /* UILabel+RatingStars.swift in Sources */,
 				F82BA3A423AA1CCE0016F0F6 /* BannerCell.swift in Sources */,
+				F87771F323BDEBE9003FC138 /* MovieInfoCell.swift in Sources */,
 				F82BA3C623B1FAC40016F0F6 /* UIImageView+Networking.swift in Sources */,
 				F87771EB23BB223F003FC138 /* MovieDetailsViewModel.swift in Sources */,
 				F82BA3BA23B0C54A0016F0F6 /* Rating.swift in Sources */,

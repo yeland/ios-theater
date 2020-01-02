@@ -1,5 +1,5 @@
 //
-//  MovieInfoHeader.swift
+//  MovieInfoCell.swift
 //  ios-theater
 //
 //  Created by Linxiao Wei on 2020/1/2.
