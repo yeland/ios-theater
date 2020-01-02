@@ -36,13 +36,17 @@ class MovieDetailsViewController: UIViewController {
       self.posterImage.layer.cornerRadius = 5
       self.titleLabel.text = movie.title
       self.originalTitleAndYear.text = "\(self.movieDetailsViewModel.showedOriginalTitleAndYear)"
-      let basicInfoString = NSMutableAttributedString(string: self.movieDetailsViewModel.showedBasicInformation)
-      let rightAttachment = NSTextAttachment()
-      rightAttachment.image = UIImage(systemName: "chevron.right")?.withTintColor(.darkGray)
-      rightAttachment.bounds = CGRect(x: 0, y: -1, width: 8, height: 12)
-      let rightString = NSAttributedString(attachment: rightAttachment)
-      basicInfoString.append(rightString)
-      self.basicInfoLabel.attributedText = basicInfoString
+      self.setupBasicInfo()
     }
+  }
+  
+  private func setupBasicInfo() {
+    let basicInfoString = NSMutableAttributedString(string: self.movieDetailsViewModel.showedBasicInformation)
+    let rightAttachment = NSTextAttachment()
+    rightAttachment.image = UIImage(systemName: "chevron.right")?.withTintColor(.darkGray)
+    rightAttachment.bounds = CGRect(x: 0, y: -1, width: 8, height: 12)
+    let rightString = NSAttributedString(attachment: rightAttachment)
+    basicInfoString.append(rightString)
+    self.basicInfoLabel.attributedText = basicInfoString
   }
 }
