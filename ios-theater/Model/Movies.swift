@@ -26,8 +26,11 @@ struct Movie: Codable {
   var casts: [Person]
   var directors: [Person]
   var countries: [String]?
-  var pubdates: [String]?
+  var pubdates: [String]
   var durations: [String]?
+  var aka: [String]?
+  var writers: [Person]?
+  var languages: [String]?
 }
 
 struct Images: Codable {

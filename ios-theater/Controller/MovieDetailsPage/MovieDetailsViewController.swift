@@ -39,6 +39,7 @@ class MovieDetailsViewController: UIViewController {
   
   @objc func clickToGetMoreInformation() {
     let movieInfoViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MovieInfoViewController") as MovieInfoViewController
+    movieInfoViewController.configure(movieDetailViewModel: movieDetailsViewModel)
     present(movieInfoViewController, animated: true)
   }
   

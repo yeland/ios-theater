@@ -272,44 +272,52 @@
                                     <action selector="clickToExit:" destination="lLV-Uk-qhh" eventType="touchUpInside" id="OXZ-zy-AQK"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TNP-sD-Iqq">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TNP-sD-Iqq">
                                 <rect key="frame" x="0.0" y="114" width="414" height="782"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieInfoCell" rowHeight="78" id="m1A-zy-6M4" customClass="MovieInfoCell" customModule="ios_theater" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="78"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieInfoCell" rowHeight="49" id="m1A-zy-6M4" customClass="MovieInfoCell" customModule="ios_theater" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="49"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m1A-zy-6M4" id="KAw-iq-jNR">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="片名：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSR-XR-Pdd">
-                                                    <rect key="frame" x="40" y="16" width="55" height="21"/>
+                                                    <rect key="frame" x="30" y="0.0" width="70" height="24"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="55" id="Hmn-wE-d9g"/>
+                                                        <constraint firstAttribute="width" constant="70" id="Hmn-wE-d9g"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我和我的祖国我和我的祖国我和我的祖国我和我的祖国" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcW-6S-OMH">
-                                                    <rect key="frame" x="95" y="16" width="299" height="41"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="100" y="0.0" width="294" height="49"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="VcW-6S-OMH" firstAttribute="leading" secondItem="pSR-XR-Pdd" secondAttribute="trailing" id="Bb1-SQ-AMi"/>
-                                                <constraint firstItem="VcW-6S-OMH" firstAttribute="top" secondItem="KAw-iq-jNR" secondAttribute="topMargin" constant="5" id="GeI-fz-Wnm"/>
-                                                <constraint firstItem="pSR-XR-Pdd" firstAttribute="top" secondItem="KAw-iq-jNR" secondAttribute="topMargin" constant="5" id="MWS-8s-Eb4"/>
-                                                <constraint firstItem="pSR-XR-Pdd" firstAttribute="leading" secondItem="KAw-iq-jNR" secondAttribute="leadingMargin" constant="20" id="qAV-53-07U"/>
-                                                <constraint firstAttribute="trailing" secondItem="VcW-6S-OMH" secondAttribute="trailing" constant="20" id="qNO-6n-ruS"/>
+                                                <constraint firstItem="VcW-6S-OMH" firstAttribute="top" secondItem="KAw-iq-jNR" secondAttribute="top" id="GeI-fz-Wnm"/>
+                                                <constraint firstAttribute="bottom" secondItem="VcW-6S-OMH" secondAttribute="bottom" id="mmu-T7-dBb"/>
+                                                <constraint firstItem="pSR-XR-Pdd" firstAttribute="left" secondItem="KAw-iq-jNR" secondAttribute="left" constant="30" id="qAV-53-07U"/>
+                                                <constraint firstAttribute="right" secondItem="VcW-6S-OMH" secondAttribute="right" constant="20" id="qNO-6n-ruS"/>
+                                                <constraint firstItem="pSR-XR-Pdd" firstAttribute="top" secondItem="VcW-6S-OMH" secondAttribute="top" id="yxY-zw-Cuo"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentLabel" destination="VcW-6S-OMH" id="NC0-wP-zav"/>
+                                            <outlet property="titleLabel" destination="pSR-XR-Pdd" id="xzT-8u-c6d"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="lLV-Uk-qhh" id="Aqb-Ks-XuY"/>
+                                    <outlet property="delegate" destination="lLV-Uk-qhh" id="diD-1L-9Z2"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

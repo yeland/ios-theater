@@ -11,6 +11,7 @@ import Foundation
 class MovieDetailsViewModel {
   private let networkClient = NetworkClient()
   var movie: Movie
+  var movieInfos = [MovieInfo]()
   
   init(withMovie movie: Movie) {
     self.movie = movie
@@ -45,11 +46,37 @@ class MovieDetailsViewModel {
   }
   
   var showedBasicInformation: String {
-    guard let pubdates = movie.pubdates, let countries = movie.countries, let durations = movie.durations else { return "" }
+    guard let countries = movie.countries, let durations = movie.durations else { return "" }
     let country = countries[0]
     let genres = movie.genres.joined(separator: " ")
-    let pubdate = pubdates[pubdates.count - 1]
+    let pubdate = movie.pubdates[movie.pubdates.count - 1]
     let duration = durations[0]
     return "\(country) / \(genres) / 上映时间：\(pubdate) / 片长: \(duration) "
   }
+  
+  func generateDetailedInfo() {
+    guard let aka = movie.aka, let movieWriters = movie.writers, let movieDurations = movie.durations, let countries = movie.countries, let movieLanguages = movie.languages else { return }
+    let name = MovieInfo(title: "名称", content: movie.title)
+    let originalName = MovieInfo(title: "原名", content: movie.original_title)
+    let otherName = MovieInfo(title: "又名", content: aka.joined(separator: " / "))
+    let directors = MovieInfo(title: "导演", content: movie.directors.map({ $0.name }).joined(separator: " / "))
+    let writers = MovieInfo(title: "编剧", content: movieWriters.map({ $0.name }).joined(separator: " / "))
+    let casts = MovieInfo(title: "主演", content: movie.casts.map({ $0.name }).joined(separator: " / "))
+    let pubdates = MovieInfo(title: "上映", content: movie.pubdates.joined(separator: " / "))
+    let genres = MovieInfo(title: "类型", content: movie.genres.joined(separator: " / "))
+    let durations = MovieInfo(title: "片长", content: movieDurations.joined(separator: " / "))
+    let country = MovieInfo(title: "地区", content: countries[0])
+    let languages = MovieInfo(title: "语言", content: movieLanguages.joined(separator: " / "))
+    if movie.title == movie.original_title {
+      movieInfos = [name]
+    } else {
+      movieInfos = [name, originalName]
+    }
+    movieInfos += [otherName, directors, writers, casts, pubdates, genres, durations, country, languages]
+  }
+}
+
+struct MovieInfo {
+  var title: String
+  var content: String
 }
