@@ -259,11 +259,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nH7-Mk-ong">
-                                <rect key="frame" x="25" y="76" width="40" height="35.5"/>
+                                <rect key="frame" x="25" y="76" width="30" height="25.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="KxB-F9-nDP"/>
-                                    <constraint firstAttribute="width" constant="40" id="Qth-h2-TdU"/>
+                                    <constraint firstAttribute="height" constant="30" id="KxB-F9-nDP"/>
+                                    <constraint firstAttribute="width" constant="30" id="Qth-h2-TdU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -273,7 +273,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TNP-sD-Iqq">
-                                <rect key="frame" x="0.0" y="114" width="414" height="782"/>
+                                <rect key="frame" x="0.0" y="104" width="414" height="792"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieInfoCell" rowHeight="49" id="m1A-zy-6M4" customClass="MovieInfoCell" customModule="ios_theater" customModuleProvider="target">
@@ -283,26 +283,26 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="片名：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSR-XR-Pdd">
-                                                    <rect key="frame" x="30" y="0.0" width="70" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="片名：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSR-XR-Pdd">
+                                                    <rect key="frame" x="30" y="3" width="56" height="21.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="70" id="Hmn-wE-d9g"/>
+                                                        <constraint firstAttribute="width" constant="56" id="Hmn-wE-d9g"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我和我的祖国我和我的祖国我和我的祖国我和我的祖国" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcW-6S-OMH">
-                                                    <rect key="frame" x="100" y="0.0" width="294" height="49"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="86" y="3" width="308" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" red="0.12552022933959961" green="0.12940767407417297" blue="0.12941193580627441" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="VcW-6S-OMH" firstAttribute="leading" secondItem="pSR-XR-Pdd" secondAttribute="trailing" id="Bb1-SQ-AMi"/>
-                                                <constraint firstItem="VcW-6S-OMH" firstAttribute="top" secondItem="KAw-iq-jNR" secondAttribute="top" id="GeI-fz-Wnm"/>
-                                                <constraint firstAttribute="bottom" secondItem="VcW-6S-OMH" secondAttribute="bottom" id="mmu-T7-dBb"/>
+                                                <constraint firstItem="VcW-6S-OMH" firstAttribute="top" secondItem="KAw-iq-jNR" secondAttribute="top" constant="3" id="GeI-fz-Wnm"/>
+                                                <constraint firstAttribute="bottom" secondItem="VcW-6S-OMH" secondAttribute="bottom" constant="3" id="mmu-T7-dBb"/>
                                                 <constraint firstItem="pSR-XR-Pdd" firstAttribute="left" secondItem="KAw-iq-jNR" secondAttribute="left" constant="30" id="qAV-53-07U"/>
                                                 <constraint firstAttribute="right" secondItem="VcW-6S-OMH" secondAttribute="right" constant="20" id="qNO-6n-ruS"/>
                                                 <constraint firstItem="pSR-XR-Pdd" firstAttribute="top" secondItem="VcW-6S-OMH" secondAttribute="top" id="yxY-zw-Cuo"/>
