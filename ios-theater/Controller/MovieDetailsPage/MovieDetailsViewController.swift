@@ -14,28 +14,27 @@ class MovieDetailsViewController: UIViewController {
   @IBOutlet weak var originalTitleAndYear: UILabel!
   @IBOutlet weak var basicInfoLabel: UILabel!
   
-  private var movieId = ""
-  private let movieDetailsViewModel = MovieDetailsViewModel()
+  private var movieDetailsViewModel: MovieDetailsViewModel!
   
   override func viewDidLoad() {
     navigationController?.navigationBar.isHidden = false
     let title = NSLocalizedString("movie", comment: "")
     self.title = title
+    let movie = self.movieDetailsViewModel.movie
+    guard let url = URL(string: movie.images.large) else { return }
+    self.posterImage.setImage(withURL: url)
+    self.posterImage.layer.cornerRadius = 5
+    self.titleLabel.text = movie.title
+    self.originalTitleAndYear.text = "\(self.movieDetailsViewModel.showedOriginalTitleAndYear)"
     fetchData()
   }
   
-  func configure(withMovieId movieId: String) {
-    self.movieId = movieId
+  func configure(withMovie movie: Movie) {
+    movieDetailsViewModel = MovieDetailsViewModel(withMovie: movie)
   }
   
   private func fetchData(){
-    movieDetailsViewModel.fetchMovieDetails(movieId: movieId) {
-      guard let movie = self.movieDetailsViewModel.movie else { return }
-      guard let url = URL(string: movie.images.large) else { return }
-      self.posterImage.setImage(withURL: url)
-      self.posterImage.layer.cornerRadius = 5
-      self.titleLabel.text = movie.title
-      self.originalTitleAndYear.text = "\(self.movieDetailsViewModel.showedOriginalTitleAndYear)"
+    movieDetailsViewModel.fetchMovieDetails() {
       self.setupBasicInfo()
     }
   }

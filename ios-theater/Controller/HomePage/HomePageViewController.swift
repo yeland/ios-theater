@@ -94,7 +94,7 @@ class HomePageViewController: UIViewController, HomePageViewControllerDelegate {
   
   internal func showDetails(item: Int) {
     let movieDetailsViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MovieDetailsViewController") as MovieDetailsViewController
-    movieDetailsViewController.configure(withMovieId: moviesViewModel.hotMovies[item].id)
+    movieDetailsViewController.configure(withMovie: moviesViewModel.hotMovies[item])
     show(movieDetailsViewController, sender: self)
   }
   

@@ -72,7 +72,7 @@ extension HotMoviesViewController {
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let movieDetailsViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MovieDetailsViewController") as MovieDetailsViewController
-    movieDetailsViewController.configure(withMovieId: moviesViewModel.hotMovies[indexPath.row].id)
+    movieDetailsViewController.configure(withMovie: moviesViewModel.hotMovies[indexPath.row])
     show(movieDetailsViewController, sender: self)
   }
 }

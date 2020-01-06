@@ -10,10 +10,14 @@ import Foundation
 
 class MovieDetailsViewModel {
   private let networkClient = NetworkClient()
-  var movie: Movie?
+  var movie: Movie
   
-  func fetchMovieDetails(movieId: String, completion: @escaping () -> Void) {
-    guard let url = URL(string: "https://api.douban.com/v2/movie/subject/\(movieId)?apikey=0df993c66c0c636e29ecbb5344252a4a") else { return }
+  init(withMovie movie: Movie) {
+    self.movie = movie
+  }
+  
+  func fetchMovieDetails(completion: @escaping () -> Void) {
+    guard let url = URL(string: "https://api.douban.com/v2/movie/subject/\(movie.id)?apikey=0df993c66c0c636e29ecbb5344252a4a") else { return }
     networkClient.request(url: url) { [weak self] data, error in
       if let data = data {
         do {
@@ -32,7 +36,6 @@ class MovieDetailsViewModel {
   
   var showedOriginalTitleAndYear: String {
     let originalTitle: String
-    guard let movie = movie else { return "" }
     if movie.title != movie.original_title {
       originalTitle = movie.original_title
     } else {
@@ -42,7 +45,7 @@ class MovieDetailsViewModel {
   }
   
   var showedBasicInformation: String {
-    guard let movie = movie, let pubdates = movie.pubdates else { return "" }
+    guard let pubdates = movie.pubdates else { return "" }
     let pubdate = pubdates[pubdates.count - 1]
     return "\(movie.countries?[0] ?? "") / \(movie.genres.joined(separator: " ")) / 上映时间：\(pubdate) / 片长: \(movie.durations?[0] ?? "") "
   }
