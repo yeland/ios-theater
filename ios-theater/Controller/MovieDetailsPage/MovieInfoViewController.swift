@@ -12,7 +12,7 @@ class MovieInfoViewController: UIViewController {
   @IBOutlet weak var exitButton: UIButton!
   @IBOutlet weak var tableView: UITableView!
   
-  private var movieDetailViewModel = MovieDetailsViewModel()
+  private var movieDetailViewModel: MovieDetailsViewModel!
   
   override func viewDidLoad() {
     super.viewDidLoad()
