@@ -45,8 +45,11 @@ class MovieDetailsViewModel {
   }
   
   var showedBasicInformation: String {
-    guard let pubdates = movie.pubdates else { return "" }
+    guard let pubdates = movie.pubdates, let countries = movie.countries, let durations = movie.durations else { return "" }
+    let country = countries[0]
+    let genres = movie.genres.joined(separator: " ")
     let pubdate = pubdates[pubdates.count - 1]
-    return "\(movie.countries?[0] ?? "") / \(movie.genres.joined(separator: " ")) / 上映时间：\(pubdate) / 片长: \(movie.durations?[0] ?? "") "
+    let duration = durations[0]
+    return "\(country) / \(genres) / 上映时间：\(pubdate) / 片长: \(duration) "
   }
 }
