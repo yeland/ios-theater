@@ -9,3 +9,14 @@
 "allString" = "All";
 "hotMoviesTitle" = "Hot Movies";
 "movie" = "Movie";
+"title" = "Title";
+"originalTitle" = "Original Title";
+"aka" = "Aka";
+"directors" = "Directors";
+"writers" = "Writers";
+"casts" = "Casts";
+"pubdates" = "Pubdates";
+"genres" = "Genres";
+"durations" = "Durations";
+"region" = "Region";
+"languages" = "Languages";
