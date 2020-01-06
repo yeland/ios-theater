@@ -18,12 +18,16 @@ struct Movies: Codable {
 struct Movie: Codable {
   var rating: Rating
   var title: String
+  var original_title: String
   var images: Images
   var id: String
   var year: String
   var genres:[String]
   var casts: [Person]
   var directors: [Person]
+  var countries: [String]?
+  var pubdates: [String]?
+  var durations: [String]?
 }
 
 struct Images: Codable {

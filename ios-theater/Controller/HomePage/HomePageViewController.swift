@@ -44,7 +44,7 @@ class HomePageViewController: UIViewController, HomePageViewControllerDelegate {
     bannerCollectionView.delegate = bannerCollectionViewDelegate
     
     hotMoviesCollectionViewDatasourse = HotMoviesCollectionViewDatasourse()
-    hotMoviesCollectionViewDelegate = HotMoviesCollectionViewDelegate()
+    hotMoviesCollectionViewDelegate = HotMoviesCollectionViewDelegate(delegate: self)
     hotMoviesCollectionView.dataSource = hotMoviesCollectionViewDatasourse
     hotMoviesCollectionView.delegate = hotMoviesCollectionViewDelegate
   }
@@ -90,6 +90,12 @@ class HomePageViewController: UIViewController, HomePageViewControllerDelegate {
   internal func removeTimer() {
     timer?.invalidate()
     timer = nil
+  }
+  
+  internal func showDetails(item: Int) {
+    let movieDetailsViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MovieDetailsViewController") as MovieDetailsViewController
+    movieDetailsViewController.configure(withMovie: moviesViewModel.hotMovies[item])
+    show(movieDetailsViewController, sender: self)
   }
   
   @objc private func autoSwitch() {

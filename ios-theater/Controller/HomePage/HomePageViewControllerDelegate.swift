@@ -12,4 +12,5 @@ protocol HomePageViewControllerDelegate: class {
   func setCurrentPage()
   func addTimer()
   func removeTimer()
+  func showDetails(item: Int)
 }
