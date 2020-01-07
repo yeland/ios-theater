@@ -173,7 +173,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ey-jJ-K7o">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="210"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="380"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mDb-ZE-9dz">
                                                 <rect key="frame" x="20" y="20" width="120" height="170"/>
@@ -201,23 +201,62 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uNn-2u-kO3" userLabel="Rating View" customClass="RatingView">
+                                                <rect key="frame" x="20" y="210" width="374" height="150"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="评分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPp-d7-NIJ">
+                                                        <rect key="frame" x="15" y="12" width="29" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7p-v3-gx0">
+                                                        <rect key="frame" x="45" y="44" width="46.5" height="39.5"/>
+                                                        <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="32"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNr-ZO-Tpo">
+                                                        <rect key="frame" x="30" y="98.5" width="42" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.86334736546889168" green="0.86334736546889168" blue="0.86334736546889168" alpha="0.33692744006849318" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstItem="UNr-ZO-Tpo" firstAttribute="top" secondItem="L7p-v3-gx0" secondAttribute="bottom" constant="15" id="GfW-NQ-4Qi"/>
+                                                    <constraint firstItem="L7p-v3-gx0" firstAttribute="leading" secondItem="uNn-2u-kO3" secondAttribute="leading" constant="45" id="Y7H-25-d7g"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DPp-d7-NIJ" secondAttribute="trailing" constant="10" id="Z07-mt-2l7"/>
+                                                    <constraint firstItem="DPp-d7-NIJ" firstAttribute="top" secondItem="uNn-2u-kO3" secondAttribute="top" constant="12" id="aaJ-UJ-NUe"/>
+                                                    <constraint firstItem="L7p-v3-gx0" firstAttribute="top" secondItem="DPp-d7-NIJ" secondAttribute="bottom" constant="15" id="dQq-x5-fSW"/>
+                                                    <constraint firstItem="UNr-ZO-Tpo" firstAttribute="leading" secondItem="uNn-2u-kO3" secondAttribute="leading" constant="30" id="q6X-TJ-FPg"/>
+                                                    <constraint firstItem="DPp-d7-NIJ" firstAttribute="leading" secondItem="uNn-2u-kO3" secondAttribute="leading" constant="15" id="qcm-9b-Z0v"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="numberLabel" destination="L7p-v3-gx0" id="c98-Vu-SIZ"/>
+                                                    <outlet property="starsLabel" destination="UNr-ZO-Tpo" id="SKO-um-WBf"/>
+                                                </connections>
+                                            </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="5Rr-eb-1wc" secondAttribute="trailing" constant="20" id="0Tz-e9-IWP"/>
-                                            <constraint firstAttribute="height" constant="210" id="1mS-Kw-6cm"/>
+                                            <constraint firstAttribute="height" constant="380" id="1mS-Kw-6cm"/>
                                             <constraint firstItem="mkb-ri-tdG" firstAttribute="top" secondItem="5Rr-eb-1wc" secondAttribute="bottom" constant="5" id="3Vo-3R-WEq"/>
                                             <constraint firstItem="mDb-ZE-9dz" firstAttribute="top" secondItem="0Ey-jJ-K7o" secondAttribute="top" constant="20" id="7H4-dc-CiS"/>
                                             <constraint firstItem="mBe-gM-YiJ" firstAttribute="leading" secondItem="mkb-ri-tdG" secondAttribute="leading" id="ALd-ys-GzL"/>
+                                            <constraint firstAttribute="bottom" secondItem="uNn-2u-kO3" secondAttribute="bottom" constant="20" id="I89-ss-Qfb"/>
                                             <constraint firstItem="5Rr-eb-1wc" firstAttribute="leading" secondItem="mDb-ZE-9dz" secondAttribute="trailing" constant="20" id="PlD-7a-Ut0"/>
                                             <constraint firstItem="5Rr-eb-1wc" firstAttribute="top" secondItem="0Ey-jJ-K7o" secondAttribute="top" constant="25" id="TxU-No-d2u"/>
+                                            <constraint firstItem="uNn-2u-kO3" firstAttribute="leading" secondItem="0Ey-jJ-K7o" secondAttribute="leading" constant="20" id="ZPl-Un-onX"/>
                                             <constraint firstItem="5Rr-eb-1wc" firstAttribute="leading" secondItem="mDb-ZE-9dz" secondAttribute="trailing" constant="20" id="a63-SP-bYu"/>
+                                            <constraint firstAttribute="trailing" secondItem="uNn-2u-kO3" secondAttribute="trailing" constant="20" id="aDV-3C-U63"/>
                                             <constraint firstItem="mDb-ZE-9dz" firstAttribute="leading" secondItem="0Ey-jJ-K7o" secondAttribute="leading" constant="20" id="eoi-Z7-aDv"/>
                                             <constraint firstItem="mBe-gM-YiJ" firstAttribute="top" secondItem="mkb-ri-tdG" secondAttribute="bottom" constant="20" id="g7e-TL-HhI"/>
                                             <constraint firstItem="mkb-ri-tdG" firstAttribute="trailing" secondItem="5Rr-eb-1wc" secondAttribute="trailing" id="ghx-Rp-xb7"/>
                                             <constraint firstItem="mkb-ri-tdG" firstAttribute="leading" secondItem="5Rr-eb-1wc" secondAttribute="leading" id="oMX-1d-Luo"/>
                                             <constraint firstItem="mBe-gM-YiJ" firstAttribute="trailing" secondItem="mkb-ri-tdG" secondAttribute="trailing" id="qHp-cF-HBs"/>
-                                            <constraint firstAttribute="bottom" secondItem="mDb-ZE-9dz" secondAttribute="bottom" constant="20" id="yeX-qL-jha"/>
+                                            <constraint firstItem="uNn-2u-kO3" firstAttribute="top" secondItem="mDb-ZE-9dz" secondAttribute="bottom" constant="20" id="yeX-qL-jha"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -243,12 +282,13 @@
                         <outlet property="basicInfoLabel" destination="mBe-gM-YiJ" id="CVd-Y3-EAc"/>
                         <outlet property="originalTitleAndYear" destination="mkb-ri-tdG" id="0uE-Sh-zAG"/>
                         <outlet property="posterImage" destination="mDb-ZE-9dz" id="7Jg-B9-AIC"/>
+                        <outlet property="ratingView" destination="uNn-2u-kO3" id="Wsq-0h-A8M"/>
                         <outlet property="titleLabel" destination="5Rr-eb-1wc" id="XyG-Cl-l6N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u7O-aU-Im9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2513" y="134"/>
+            <point key="canvasLocation" x="2511.594202898551" y="133.92857142857142"/>
         </scene>
         <!--Movie Info View Controller-->
         <scene sceneID="0Vq-sJ-1IT">

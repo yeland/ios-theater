@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MovieDetailsViewModel {
+@objcMembers class MovieDetailsViewModel: NSObject {
   private let networkClient = NetworkClient()
   var movie: Movie
   var movieInfos = [MovieInfo]()
@@ -74,6 +74,10 @@ class MovieDetailsViewModel {
       movieInfos = [name, originalName]
     }
     movieInfos += [otherName, directors, writers, casts, pubdates, genres, durations, country, languages]
+  }
+  
+  var ratingNumber: Double {
+    return movie.rating.average
   }
 }
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UILabel {
+@objc extension UILabel {
   func setStars(rating: Double, size: CGFloat) -> NSMutableAttributedString {
     let notEmptyStarsNumber = Int(ceil(rating/2))
     let notEmptyStars = generateNotEmptyStars(number: notEmptyStarsNumber, rating: rating, size: size)
