@@ -79,6 +79,13 @@ import Foundation
   var ratingNumber: Double {
     return movie.rating.average
   }
+  
+  var percentOfStars: [Double] {
+    let ratingDetails = movie.rating.details
+    let total = ratingDetails.one + ratingDetails.two + ratingDetails.three + ratingDetails.four + ratingDetails.five
+    let ratingNumbers = [ratingDetails.five, ratingDetails.four, ratingDetails.three, ratingDetails.two, ratingDetails.one]
+    return ratingNumbers.map({ $0 / total })
+  }
 }
 
 struct MovieInfo {

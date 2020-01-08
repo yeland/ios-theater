@@ -7,12 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "ios_theater-Swift.h"
 @class MovieDetailsViewModel;
 
 @interface RatingView : UIView
-@property (strong, nonatomic) IBOutlet UILabel *numberLabel;
-@property (strong, nonatomic) IBOutlet UILabel *starsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *numberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *starsLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *fiveLabel;
+@property (weak, nonatomic) IBOutlet UILabel *fourLabel;
+@property (weak, nonatomic) IBOutlet UILabel *threeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *twoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *oneLabel;
+
+@property (weak, nonatomic) IBOutlet UIProgressView *fiveProgress;
+@property (weak, nonatomic) IBOutlet UIProgressView *fourProgress;
+@property (weak, nonatomic) IBOutlet UIProgressView *threeProgress;
+@property (weak, nonatomic) IBOutlet UIProgressView *twoProgress;
+@property (weak, nonatomic) IBOutlet UIProgressView *oneProgress;
 
 -(void) configure: (MovieDetailsViewModel*) movieDetailsViewModel;
 

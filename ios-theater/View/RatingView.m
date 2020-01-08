@@ -14,9 +14,19 @@
 
 -(void) configure: (MovieDetailsViewModel*) movieDetailsViewModel {
   _numberLabel.text = [NSString stringWithFormat:@"%.1f", movieDetailsViewModel.ratingNumber];
-  NSMutableAttributedString *ratingString = [_starsLabel setStarsWithRating:movieDetailsViewModel.ratingNumber size:16];
+  NSMutableAttributedString *ratingString = [_starsLabel setStarsWithRating:movieDetailsViewModel.ratingNumber size:15];
   [ratingString addAttribute:NSForegroundColorAttributeName value:[UIColor systemYellowColor] range:NSMakeRange(0, 5)];
   _starsLabel.attributedText = ratingString;
+  [_fiveLabel genenrateFullStarsWithNumber:5];
+  [_fourLabel genenrateFullStarsWithNumber:4];
+  [_threeLabel genenrateFullStarsWithNumber:3];
+  [_twoLabel genenrateFullStarsWithNumber:2];
+  [_oneLabel genenrateFullStarsWithNumber:1];
+  _fiveProgress.progress = [[movieDetailsViewModel percentOfStars][0] floatValue];
+  _fourProgress.progress = [[movieDetailsViewModel percentOfStars][1] floatValue];
+  _threeProgress.progress = [[movieDetailsViewModel percentOfStars][2] floatValue];
+  _twoProgress.progress = [[movieDetailsViewModel percentOfStars][3] floatValue];
+  _oneProgress.progress = [[movieDetailsViewModel percentOfStars][4] floatValue];
 }
 
 @end
