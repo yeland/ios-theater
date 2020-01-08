@@ -31,7 +31,8 @@
 }
 
 -(void) setRatingCount {
-  _ratingCountLabel.text = [NSString stringWithFormat:@"%ld人评分", (long)_movieDetailsViewModel.ratingCount];
+  NSString *words = NSLocalizedString(@"ratingCount", @"");
+  _ratingCountLabel.text = [NSString stringWithFormat:@"%ld %@", (long)_movieDetailsViewModel.ratingCount, words];
 }
 
 @end
