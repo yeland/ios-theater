@@ -50,6 +50,7 @@ class MovieDetailsViewController: UIViewController {
   private func fetchData(){
     movieDetailsViewModel.fetchMovieDetails() {
       self.setupBasicInfo()
+      self.ratingView.setRatingCount()
     }
   }
   

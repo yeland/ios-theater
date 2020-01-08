@@ -13,6 +13,7 @@
 @implementation RatingView
 
 -(void) configure: (MovieDetailsViewModel*) movieDetailsViewModel {
+  self.movieDetailsViewModel = movieDetailsViewModel;
   _numberLabel.text = [NSString stringWithFormat:@"%.1f", movieDetailsViewModel.ratingNumber];
   NSMutableAttributedString *ratingString = [_starsLabel setStarsWithRating:movieDetailsViewModel.ratingNumber size:15];
   [ratingString addAttribute:NSForegroundColorAttributeName value:[UIColor systemYellowColor] range:NSMakeRange(0, 5)];
@@ -27,6 +28,10 @@
   _threeProgress.progress = [[movieDetailsViewModel percentOfStars][2] floatValue];
   _twoProgress.progress = [[movieDetailsViewModel percentOfStars][3] floatValue];
   _oneProgress.progress = [[movieDetailsViewModel percentOfStars][4] floatValue];
+}
+
+-(void) setRatingCount {
+  _ratingCountLabel.text = [NSString stringWithFormat:@"%ld人评分", (long)_movieDetailsViewModel.ratingCount];
 }
 
 @end

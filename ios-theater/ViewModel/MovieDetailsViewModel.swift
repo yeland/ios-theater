@@ -86,6 +86,10 @@ import Foundation
     let ratingNumbers = [ratingDetails.five, ratingDetails.four, ratingDetails.three, ratingDetails.two, ratingDetails.one]
     return ratingNumbers.map({ $0 / total })
   }
+  
+  var ratingCount: Int {
+    return movie.ratings_count ?? 0
+  }
 }
 
 struct MovieInfo {

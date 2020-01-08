@@ -31,6 +31,7 @@ struct Movie: Codable {
   var aka: [String]?
   var writers: [Person]?
   var languages: [String]?
+  let ratings_count: Int?
 }
 
 struct Images: Codable {
