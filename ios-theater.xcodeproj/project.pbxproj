@@ -36,6 +36,9 @@
 		F87771E323B9FAAB003FC138 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F87771E523B9FAAB003FC138 /* Localizable.strings */; };
 		F87771E923BAF545003FC138 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87771E823BAF545003FC138 /* MovieDetailsViewController.swift */; };
 		F87771EB23BB223F003FC138 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87771EA23BB223F003FC138 /* MovieDetailsViewModel.swift */; };
+		F87771ED23BDC1D0003FC138 /* MovieInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87771EC23BDC1D0003FC138 /* MovieInfoViewController.swift */; };
+		F87771F323BDEBE9003FC138 /* MovieInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87771F223BDEBE9003FC138 /* MovieInfoCell.swift */; };
+		F87771F423BF280C003FC138 /* MovieInfoHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F87771F623BF280C003FC138 /* MovieInfoHeader.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +78,11 @@
 		F87771E623B9FAB0003FC138 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		F87771E823BAF545003FC138 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		F87771EA23BB223F003FC138 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
+		F87771EC23BDC1D0003FC138 /* MovieInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoViewController.swift; sourceTree = "<group>"; };
+		F87771F223BDEBE9003FC138 /* MovieInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoCell.swift; sourceTree = "<group>"; };
+		F87771F823BF2818003FC138 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MovieInfoHeader.strings"; sourceTree = "<group>"; };
+		F87771F923BF282B003FC138 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MovieInfoHeader.xib; sourceTree = "<group>"; };
+		F87771FA23BF285E003FC138 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MovieInfoHeader.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +220,8 @@
 				F82BA3DF23B5FE180016F0F6 /* MovieTableCell.xib */,
 				F87771DF23B9DA86003FC138 /* HotMoviesFooter.xib */,
 				F87771DD23B9D666003FC138 /* HotMoviesFooter.swift */,
+				F87771F623BF280C003FC138 /* MovieInfoHeader.xib */,
+				F87771F223BDEBE9003FC138 /* MovieInfoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -220,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				F87771E823BAF545003FC138 /* MovieDetailsViewController.swift */,
+				F87771EC23BDC1D0003FC138 /* MovieInfoViewController.swift */,
 			);
 			path = MovieDetailsPage;
 			sourceTree = "<group>";
@@ -286,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F82BA3E023B5FE180016F0F6 /* MovieTableCell.xib in Resources */,
+				F87771F423BF280C003FC138 /* MovieInfoHeader.xib in Resources */,
 				F87771E023B9DA86003FC138 /* HotMoviesFooter.xib in Resources */,
 				F82BA3C023B1E6CD0016F0F6 /* MovieCollectionCell.xib in Resources */,
 				F87771E323B9FAAB003FC138 /* Localizable.strings in Resources */,
@@ -350,6 +362,7 @@
 				F82BA3DC23B5F95D0016F0F6 /* HotMoviesViewController.swift in Sources */,
 				F82BA3B823B0C42F0016F0F6 /* Movies.swift in Sources */,
 				F87771DE23B9D666003FC138 /* HotMoviesFooter.swift in Sources */,
+				F87771ED23BDC1D0003FC138 /* MovieInfoViewController.swift in Sources */,
 				F82BA3B423B0C0EB0016F0F6 /* MoviesViewModel.swift in Sources */,
 				F82BA3DE23B5FDEE0016F0F6 /* MovieTableCell.swift in Sources */,
 				F82BA3D423B5D0610016F0F6 /* HomePageViewControllerDelegate.swift in Sources */,
@@ -357,6 +370,7 @@
 				F82BA3B223B0BB0F0016F0F6 /* NetworkClient.swift in Sources */,
 				F82BA3C823B3421E0016F0F6 /* UILabel+RatingStars.swift in Sources */,
 				F82BA3A423AA1CCE0016F0F6 /* BannerCell.swift in Sources */,
+				F87771F323BDEBE9003FC138 /* MovieInfoCell.swift in Sources */,
 				F82BA3C623B1FAC40016F0F6 /* UIImageView+Networking.swift in Sources */,
 				F87771EB23BB223F003FC138 /* MovieDetailsViewModel.swift in Sources */,
 				F82BA3BA23B0C54A0016F0F6 /* Rating.swift in Sources */,
@@ -396,6 +410,16 @@
 				F87771E623B9FAB0003FC138 /* zh-Hans */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		F87771F623BF280C003FC138 /* MovieInfoHeader.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F87771F823BF2818003FC138 /* zh-Hans */,
+				F87771F923BF282B003FC138 /* Base */,
+				F87771FA23BF285E003FC138 /* en */,
+			);
+			name = MovieInfoHeader.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

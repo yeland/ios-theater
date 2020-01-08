@@ -11,6 +11,7 @@ import Foundation
 class MovieDetailsViewModel {
   private let networkClient = NetworkClient()
   var movie: Movie
+  var movieInfos = [MovieInfo]()
   
   init(withMovie movie: Movie) {
     self.movie = movie
@@ -45,11 +46,43 @@ class MovieDetailsViewModel {
   }
   
   var showedBasicInformation: String {
-    guard let pubdates = movie.pubdates, let countries = movie.countries, let durations = movie.durations else { return "" }
+    guard let countries = movie.countries, let durations = movie.durations else { return "" }
     let country = countries[0]
     let genres = movie.genres.joined(separator: " ")
-    let pubdate = pubdates[pubdates.count - 1]
+    let pubdate = movie.pubdates[movie.pubdates.count - 1]
     let duration = durations[0]
     return "\(country) / \(genres) / 上映时间：\(pubdate) / 片长: \(duration) "
+  }
+  
+  func generateDetailedInfo() {
+    guard let aka = movie.aka, let movieWriters = movie.writers, let movieDurations = movie.durations, let countries = movie.countries, let movieLanguages = movie.languages else { return }
+    let name = MovieInfo("title", movie.title)
+    let originalName = MovieInfo("originalTitle", movie.original_title)
+    let otherName = MovieInfo("aka", aka.joined(separator: " / "))
+    let directors = MovieInfo("directors", movie.directors.map({ $0.name }).joined(separator: " / "))
+    let writers = MovieInfo("writers", movieWriters.map({ $0.name }).joined(separator: " / "))
+    let casts = MovieInfo("casts", movie.casts.map({ $0.name }).joined(separator: " / "))
+    let pubdates = MovieInfo("pubdates", movie.pubdates.joined(separator: " / "))
+    let genres = MovieInfo("genres", movie.genres.joined(separator: " / "))
+    let durations = MovieInfo("durations", movieDurations.joined(separator: " / "))
+    let country = MovieInfo("region", countries[0])
+    let languages = MovieInfo("languages", movieLanguages.joined(separator: " / "))
+    
+    if movie.title == movie.original_title {
+      movieInfos = [name]
+    } else {
+      movieInfos = [name, originalName]
+    }
+    movieInfos += [otherName, directors, writers, casts, pubdates, genres, durations, country, languages]
+  }
+}
+
+struct MovieInfo {
+  var title: String
+  var content: String
+  
+  init(_ key: String, _ content: String) {
+    title = NSLocalizedString(key, comment: "")
+    self.content = content
   }
 }

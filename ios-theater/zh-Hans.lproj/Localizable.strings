@@ -9,3 +9,14 @@
 "allString" = "全部";
 "hotMoviesTitle" = "热门电影";
 "movie" = "电影";
+"title" = "名称";
+"originalTitle" = "原名";
+"aka" = "又名";
+"directors" = "导演";
+"writers" = "编剧";
+"casts" = "演员";
+"pubdates" = "上映";
+"genres" = "类型";
+"durations" = "片长";
+"region" = "地区";
+"languages" = "语言";

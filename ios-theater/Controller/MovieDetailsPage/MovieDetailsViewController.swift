@@ -20,17 +20,27 @@ class MovieDetailsViewController: UIViewController {
     navigationController?.navigationBar.isHidden = false
     let title = NSLocalizedString("movie", comment: "")
     self.title = title
+
     let movie = self.movieDetailsViewModel.movie
     guard let url = URL(string: movie.images.large) else { return }
     self.posterImage.setImage(withURL: url)
     self.posterImage.layer.cornerRadius = 5
     self.titleLabel.text = movie.title
     self.originalTitleAndYear.text = "\(self.movieDetailsViewModel.showedOriginalTitleAndYear)"
+    let tap = UITapGestureRecognizer(target: self, action: #selector(clickToGetMoreInformation))
+    basicInfoLabel.isUserInteractionEnabled = true
+    basicInfoLabel.addGestureRecognizer(tap)
     fetchData()
   }
   
   func configure(withMovie movie: Movie) {
     movieDetailsViewModel = MovieDetailsViewModel(withMovie: movie)
+  }
+  
+  @objc func clickToGetMoreInformation() {
+    let movieInfoViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MovieInfoViewController") as MovieInfoViewController
+    movieInfoViewController.configure(movieDetailViewModel: movieDetailsViewModel)
+    present(movieInfoViewController, animated: true)
   }
   
   private func fetchData(){
