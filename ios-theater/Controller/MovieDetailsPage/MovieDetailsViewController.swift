@@ -14,6 +14,7 @@ class MovieDetailsViewController: UIViewController {
   @IBOutlet weak var originalTitleAndYear: UILabel!
   @IBOutlet weak var basicInfoLabel: UILabel!
   @IBOutlet weak var ratingView: RatingView!
+  @IBOutlet weak var introductionLabel: UILabel!
   
   private var movieDetailsViewModel: MovieDetailsViewModel!
   
@@ -51,6 +52,7 @@ class MovieDetailsViewController: UIViewController {
     movieDetailsViewModel.fetchMovieDetails() {
       self.setupBasicInfo()
       self.ratingView.setRatingCount()
+      self.introductionLabel.text = self.movieDetailsViewModel.movie.summary
     }
   }
   
