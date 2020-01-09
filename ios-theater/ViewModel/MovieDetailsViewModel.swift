@@ -46,7 +46,13 @@ import Foundation
   }
   
   var showedBasicInformation: String {
-    guard let countries = movie.countries, let durations = movie.durations else { return "" }
+    guard
+      let countries = movie.countries,
+      let durations = movie.durations
+    else {
+      return ""
+    }
+    
     let country = countries[0]
     let genres = movie.genres.joined(separator: " ")
     let pubdate = movie.pubdates[movie.pubdates.count - 1]
@@ -55,7 +61,16 @@ import Foundation
   }
   
   func generateDetailedInfo() {
-    guard let aka = movie.aka, let movieWriters = movie.writers, let movieDurations = movie.durations, let countries = movie.countries, let movieLanguages = movie.languages else { return }
+    guard
+      let aka = movie.aka,
+      let movieWriters = movie.writers,
+      let movieDurations = movie.durations,
+      let countries = movie.countries,
+      let movieLanguages = movie.languages
+    else {
+      return
+    }
+    
     let name = MovieInfo("title", movie.title)
     let originalName = MovieInfo("originalTitle", movie.original_title)
     let otherName = MovieInfo("aka", aka.joined(separator: " / "))
