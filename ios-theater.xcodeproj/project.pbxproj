@@ -177,6 +177,7 @@
 				F834B8D023A8658600DA85D2 /* Controller */,
 				F834B8BB23A8533300DA85D2 /* AppDelegate.swift */,
 				F834B8BD23A8533300DA85D2 /* SceneDelegate.swift */,
+				F87771FF23C46EF9003FC138 /* ios-theater-Bridging-Header.h */,
 				F834B8C123A8533300DA85D2 /* Main.storyboard */,
 				F834B8C423A8533700DA85D2 /* Assets.xcassets */,
 				F834B8C623A8533700DA85D2 /* LaunchScreen.storyboard */,
@@ -228,7 +229,6 @@
 				F87771F223BDEBE9003FC138 /* MovieInfoCell.swift */,
 				F877720223C46F2F003FC138 /* RatingView.h */,
 				F877720023C46F27003FC138 /* RatingView.m */,
-				F87771FF23C46EF9003FC138 /* ios-theater-Bridging-Header.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -565,7 +565,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "practice.ios-theater";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ios-theater/View/ios-theater-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ios-theater/ios-theater-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -587,7 +587,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "practice.ios-theater";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ios-theater/View/ios-theater-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ios-theater/ios-theater-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
