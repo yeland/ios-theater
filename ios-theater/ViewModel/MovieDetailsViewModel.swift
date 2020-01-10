@@ -48,7 +48,8 @@ import Foundation
   var showedBasicInformation: String {
     guard
       let countries = movie.countries,
-      let durations = movie.durations
+      let durations = movie.durations,
+      movie.pubdates.count != 0
     else {
       return ""
     }

@@ -52,7 +52,8 @@ class MovieDetailsViewController: UIViewController {
     movieDetailsViewModel.fetchMovieDetails() {
       self.setupBasicInfo()
       self.ratingView.setRatingCount()
-      self.introductionLabel.text = self.movieDetailsViewModel.movie.summary
+//      self.introductionLabel.text = self.movieDetailsViewModel.movie.summary
+      self.setupIntroduction()
     }
   }
   
@@ -64,5 +65,24 @@ class MovieDetailsViewController: UIViewController {
     let rightString = NSAttributedString(attachment: rightAttachment)
     basicInfoString.append(rightString)
     self.basicInfoLabel.attributedText = basicInfoString
+  }
+  
+  private func setupIntroduction() {
+    let linesArray = introductionLabel.getLinesArrayFromLabel(content: movieDetailsViewModel.movie.summary ?? "")
+    var introductionString = NSMutableAttributedString(string: linesArray[0])
+    if linesArray.count > 4 {
+      let forthLine = NSMutableAttributedString(string: linesArray[3])
+      forthLine.replaceCharacters(in: NSRange(location: forthLine.length - 4, length: 4), with: "… 展开")
+      introductionString.append(NSAttributedString(string: linesArray[1]))
+      introductionString.append(NSAttributedString(string: linesArray[2]))
+      introductionString.append(forthLine)
+      introductionString.addAttribute(.foregroundColor, value: UIColor.black, range: NSRange(location: introductionString.length - 2, length: 2))
+    } else {
+      introductionString = NSMutableAttributedString(string: movieDetailsViewModel.movie.summary ?? "")
+    }
+    let paragraphStyle = NSMutableParagraphStyle()
+    paragraphStyle.lineSpacing = 6
+    introductionString.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: introductionString.length))
+    introductionLabel.attributedText = introductionString
   }
 }
