@@ -8,11 +8,9 @@
 
 import Foundation
 
-extension UILabel {
-  func getLinesArrayFromLabel(content: String) -> [String] {
-    let text:NSString = content as NSString
-    let font:UIFont = self.font
-    let rect:CGRect = self.frame
+extension String {
+  func getLinesArrayFromLabel(font: UIFont, rect: CGRect) -> [String] {
+    let text:NSString = self as NSString
     
     let myFont:CTFont = CTFontCreateWithName(font.fontName as CFString, font.pointSize, nil)
     let attStr:NSMutableAttributedString = NSMutableAttributedString(string: text as String)
@@ -32,5 +30,11 @@ extension UILabel {
       linesArray.append(lineString as String)
     }
     return linesArray
+  }
+  
+  func getWidth(font: UIFont) -> CGFloat {
+    let string = NSMutableAttributedString(string: self)
+    string.addAttribute(.font, value: font, range: NSRange(location: 0, length: string.length))
+    return string.size().width
   }
 }
