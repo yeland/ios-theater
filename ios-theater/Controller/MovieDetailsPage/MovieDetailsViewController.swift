@@ -52,7 +52,6 @@ class MovieDetailsViewController: UIViewController {
     movieDetailsViewModel.fetchMovieDetails() {
       self.setupBasicInfo()
       self.ratingView.setRatingCount()
-//      self.introductionLabel.text = self.movieDetailsViewModel.movie.summary
       self.setupIntroduction()
     }
   }
@@ -80,6 +79,18 @@ class MovieDetailsViewController: UIViewController {
     } else {
       introductionString = NSMutableAttributedString(string: movieDetailsViewModel.movie.summary ?? "")
     }
+    let paragraphStyle = NSMutableParagraphStyle()
+    paragraphStyle.lineSpacing = 6
+    introductionString.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: introductionString.length))
+    introductionLabel.attributedText = introductionString
+    
+    let tap = UITapGestureRecognizer(target: self, action: #selector(clickToShowMore))
+    introductionLabel.isUserInteractionEnabled = true
+    introductionLabel.addGestureRecognizer(tap)
+  }
+  
+  @objc private func clickToShowMore() {
+    let introductionString = NSMutableAttributedString(string: movieDetailsViewModel.movie.summary ?? "")
     let paragraphStyle = NSMutableParagraphStyle()
     paragraphStyle.lineSpacing = 6
     introductionString.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: introductionString.length))
