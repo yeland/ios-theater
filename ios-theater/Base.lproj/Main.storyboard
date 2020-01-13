@@ -173,7 +173,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ey-jJ-K7o">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="449.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="491"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mDb-ZE-9dz">
                                                 <rect key="frame" x="20" y="20" width="120" height="170"/>
@@ -375,6 +375,12 @@ ICAgICAgICAgICAgICAgA
                                                 <color key="textColor" red="0.40392425656318665" green="0.39992111921310425" blue="0.40392228960990906" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="演职员" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHM-vF-3n1">
+                                                <rect key="frame" x="20" y="449.5" width="55.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="5Rr-eb-1wc" secondAttribute="trailing" constant="20" id="0Tz-e9-IWP"/>
@@ -382,9 +388,11 @@ ICAgICAgICAgICAgICAgA
                                             <constraint firstItem="WXp-Un-qLe" firstAttribute="leading" secondItem="0Ey-jJ-K7o" secondAttribute="leading" constant="20" id="6Rk-gx-4FQ"/>
                                             <constraint firstItem="mDb-ZE-9dz" firstAttribute="top" secondItem="0Ey-jJ-K7o" secondAttribute="top" constant="20" id="7H4-dc-CiS"/>
                                             <constraint firstItem="mBe-gM-YiJ" firstAttribute="leading" secondItem="mkb-ri-tdG" secondAttribute="leading" id="ALd-ys-GzL"/>
+                                            <constraint firstAttribute="bottom" secondItem="qHM-vF-3n1" secondAttribute="bottom" constant="20" id="ERH-xK-CpU"/>
                                             <constraint firstItem="Y6I-Ca-dtu" firstAttribute="top" secondItem="uNn-2u-kO3" secondAttribute="bottom" constant="20" id="I89-ss-Qfb"/>
-                                            <constraint firstAttribute="bottom" secondItem="WXp-Un-qLe" secondAttribute="bottom" constant="20" id="LWE-Fo-gUp"/>
+                                            <constraint firstItem="qHM-vF-3n1" firstAttribute="leading" secondItem="0Ey-jJ-K7o" secondAttribute="leading" constant="20" id="LbW-pM-SKI"/>
                                             <constraint firstItem="5Rr-eb-1wc" firstAttribute="leading" secondItem="mDb-ZE-9dz" secondAttribute="trailing" constant="20" id="PlD-7a-Ut0"/>
+                                            <constraint firstItem="qHM-vF-3n1" firstAttribute="top" secondItem="WXp-Un-qLe" secondAttribute="bottom" constant="20" id="TBh-dZ-VVf"/>
                                             <constraint firstItem="5Rr-eb-1wc" firstAttribute="top" secondItem="0Ey-jJ-K7o" secondAttribute="top" constant="25" id="TxU-No-d2u"/>
                                             <constraint firstItem="uNn-2u-kO3" firstAttribute="leading" secondItem="0Ey-jJ-K7o" secondAttribute="leading" constant="20" id="ZPl-Un-onX"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Y6I-Ca-dtu" secondAttribute="trailing" constant="20" id="Zw6-jN-0lY"/>
