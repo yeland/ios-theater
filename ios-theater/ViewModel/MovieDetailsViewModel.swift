@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MovieDetailsViewModel {
+@objcMembers class MovieDetailsViewModel: NSObject {
   private let networkClient = NetworkClient()
   var movie: Movie
   var movieInfos = [MovieInfo]()
@@ -46,7 +46,13 @@ class MovieDetailsViewModel {
   }
   
   var showedBasicInformation: String {
-    guard let countries = movie.countries, let durations = movie.durations else { return "" }
+    guard
+      let countries = movie.countries,
+      let durations = movie.durations
+    else {
+      return ""
+    }
+    
     let country = countries[0]
     let genres = movie.genres.joined(separator: " ")
     let pubdate = movie.pubdates[movie.pubdates.count - 1]
@@ -55,7 +61,16 @@ class MovieDetailsViewModel {
   }
   
   func generateDetailedInfo() {
-    guard let aka = movie.aka, let movieWriters = movie.writers, let movieDurations = movie.durations, let countries = movie.countries, let movieLanguages = movie.languages else { return }
+    guard
+      let aka = movie.aka,
+      let movieWriters = movie.writers,
+      let movieDurations = movie.durations,
+      let countries = movie.countries,
+      let movieLanguages = movie.languages
+    else {
+      return
+    }
+    
     let name = MovieInfo("title", movie.title)
     let originalName = MovieInfo("originalTitle", movie.original_title)
     let otherName = MovieInfo("aka", aka.joined(separator: " / "))
@@ -74,6 +89,21 @@ class MovieDetailsViewModel {
       movieInfos = [name, originalName]
     }
     movieInfos += [otherName, directors, writers, casts, pubdates, genres, durations, country, languages]
+  }
+  
+  var ratingNumber: Double {
+    return movie.rating.average
+  }
+  
+  var percentOfStars: [Double] {
+    let ratingDetails = movie.rating.details
+    let total = ratingDetails.one + ratingDetails.two + ratingDetails.three + ratingDetails.four + ratingDetails.five
+    let ratingNumbers = [ratingDetails.five, ratingDetails.four, ratingDetails.three, ratingDetails.two, ratingDetails.one]
+    return ratingNumbers.map({ $0 / total })
+  }
+  
+  var ratingCount: Int {
+    return movie.ratings_count ?? 0
   }
 }
 

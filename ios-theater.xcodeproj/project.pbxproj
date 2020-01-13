@@ -39,6 +39,7 @@
 		F87771ED23BDC1D0003FC138 /* MovieInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87771EC23BDC1D0003FC138 /* MovieInfoViewController.swift */; };
 		F87771F323BDEBE9003FC138 /* MovieInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87771F223BDEBE9003FC138 /* MovieInfoCell.swift */; };
 		F87771F423BF280C003FC138 /* MovieInfoHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F87771F623BF280C003FC138 /* MovieInfoHeader.xib */; };
+		F877720123C46F27003FC138 /* RatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F877720023C46F27003FC138 /* RatingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,9 @@
 		F87771F823BF2818003FC138 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MovieInfoHeader.strings"; sourceTree = "<group>"; };
 		F87771F923BF282B003FC138 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MovieInfoHeader.xib; sourceTree = "<group>"; };
 		F87771FA23BF285E003FC138 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MovieInfoHeader.strings; sourceTree = "<group>"; };
+		F87771FF23C46EF9003FC138 /* ios-theater-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-theater-Bridging-Header.h"; sourceTree = "<group>"; };
+		F877720023C46F27003FC138 /* RatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingView.m; sourceTree = "<group>"; };
+		F877720223C46F2F003FC138 /* RatingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RatingView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,7 @@
 				F834B8D023A8658600DA85D2 /* Controller */,
 				F834B8BB23A8533300DA85D2 /* AppDelegate.swift */,
 				F834B8BD23A8533300DA85D2 /* SceneDelegate.swift */,
+				F87771FF23C46EF9003FC138 /* ios-theater-Bridging-Header.h */,
 				F834B8C123A8533300DA85D2 /* Main.storyboard */,
 				F834B8C423A8533700DA85D2 /* Assets.xcassets */,
 				F834B8C623A8533700DA85D2 /* LaunchScreen.storyboard */,
@@ -222,6 +227,8 @@
 				F87771DD23B9D666003FC138 /* HotMoviesFooter.swift */,
 				F87771F623BF280C003FC138 /* MovieInfoHeader.xib */,
 				F87771F223BDEBE9003FC138 /* MovieInfoCell.swift */,
+				F877720223C46F2F003FC138 /* RatingView.h */,
+				F877720023C46F27003FC138 /* RatingView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -269,6 +276,7 @@
 				TargetAttributes = {
 					F834B8B723A8533300DA85D2 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -371,6 +379,7 @@
 				F82BA3C823B3421E0016F0F6 /* UILabel+RatingStars.swift in Sources */,
 				F82BA3A423AA1CCE0016F0F6 /* BannerCell.swift in Sources */,
 				F87771F323BDEBE9003FC138 /* MovieInfoCell.swift in Sources */,
+				F877720123C46F27003FC138 /* RatingView.m in Sources */,
 				F82BA3C623B1FAC40016F0F6 /* UIImageView+Networking.swift in Sources */,
 				F87771EB23BB223F003FC138 /* MovieDetailsViewModel.swift in Sources */,
 				F82BA3BA23B0C54A0016F0F6 /* Rating.swift in Sources */,
@@ -546,6 +555,7 @@
 			baseConfigurationReference = 7F359972AD4DFC5825FBAE5B /* Pods-ios-theater.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P5Y234NJ9H;
 				INFOPLIST_FILE = "ios-theater/Info.plist";
@@ -555,6 +565,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "practice.ios-theater";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ios-theater/ios-theater-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -565,6 +577,7 @@
 			baseConfigurationReference = 052243F56C7D6A5E4ED9BCCD /* Pods-ios-theater.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P5Y234NJ9H;
 				INFOPLIST_FILE = "ios-theater/Info.plist";
@@ -574,6 +587,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "practice.ios-theater";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ios-theater/ios-theater-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

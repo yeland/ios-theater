@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UILabel {
+@objc extension UILabel {
   func setStars(rating: Double, size: CGFloat) -> NSMutableAttributedString {
     let notEmptyStarsNumber = Int(ceil(rating/2))
     let notEmptyStars = generateNotEmptyStars(number: notEmptyStarsNumber, rating: rating, size: size)
@@ -50,5 +50,15 @@ extension UILabel {
     attachment.image = UIImage(systemName: iconName)?.withRenderingMode(.alwaysTemplate)
     attachment.bounds = CGRect(x: 0, y: -2, width: size, height: size)
     return NSAttributedString(attachment: attachment)
+  }
+  
+  func genenrateFullStars(number: Int) {
+    let starsString = NSMutableAttributedString(string: "")
+    let fillStarString = generateString(iconName: "star.fill", size: 12)
+    for _ in 0..<number {
+      starsString.append(fillStarString)
+    }
+    starsString.addAttribute(.foregroundColor, value: UIColor.lightGray, range: NSRange(location: 0, length: number))
+    self.attributedText = starsString
   }
 }

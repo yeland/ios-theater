@@ -13,6 +13,7 @@ class MovieDetailsViewController: UIViewController {
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var originalTitleAndYear: UILabel!
   @IBOutlet weak var basicInfoLabel: UILabel!
+  @IBOutlet weak var ratingView: RatingView!
   
   private var movieDetailsViewModel: MovieDetailsViewModel!
   
@@ -30,6 +31,9 @@ class MovieDetailsViewController: UIViewController {
     let tap = UITapGestureRecognizer(target: self, action: #selector(clickToGetMoreInformation))
     basicInfoLabel.isUserInteractionEnabled = true
     basicInfoLabel.addGestureRecognizer(tap)
+    
+    ratingView.configure(movieDetailsViewModel)
+    ratingView.layer.cornerRadius = 10
     fetchData()
   }
   
@@ -43,9 +47,10 @@ class MovieDetailsViewController: UIViewController {
     present(movieInfoViewController, animated: true)
   }
   
-  private func fetchData(){
+  private func fetchData() {
     movieDetailsViewModel.fetchMovieDetails() {
       self.setupBasicInfo()
+      self.ratingView.setRatingCount()
     }
   }
   

@@ -20,7 +20,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我和我的祖国" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2D-8V-b4t">
-                    <rect key="frame" x="130" y="15" width="122.5" height="24"/>
+                    <rect key="frame" x="130" y="15" width="264" height="24"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -60,6 +60,7 @@
                 <constraint firstAttribute="trailing" secondItem="Mos-UV-iRF" secondAttribute="trailing" constant="30" id="W4E-Up-PoE"/>
                 <constraint firstItem="MtZ-Si-hH5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="WFc-it-5c0"/>
                 <constraint firstItem="b2D-8V-b4t" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="bJ8-Af-4aj"/>
+                <constraint firstAttribute="trailing" secondItem="b2D-8V-b4t" secondAttribute="trailing" constant="20" id="fqh-Tb-hC9"/>
                 <constraint firstAttribute="trailing" secondItem="QmW-Cd-3PX" secondAttribute="trailing" constant="20" id="hb0-nM-Kuc"/>
                 <constraint firstAttribute="bottom" secondItem="Mos-UV-iRF" secondAttribute="bottom" constant="10" id="jgH-hq-1eO"/>
                 <constraint firstItem="MtZ-Si-hH5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="usd-2t-xhf"/>
