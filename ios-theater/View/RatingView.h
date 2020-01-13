@@ -11,8 +11,6 @@
 
 @interface RatingView : UIView
 
-@property MovieDetailsViewModel *movieDetailsViewModel;
-
 @property (weak, nonatomic) IBOutlet UILabel *numberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *starsLabel;
 
@@ -30,7 +28,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *ratingCountLabel;
 
--(void) configure: (MovieDetailsViewModel*) movieDetailsViewModel;
--(void) setRatingCount;
+- (void)configure:(MovieDetailsViewModel*) movieDetailsViewModel;
+- (void)setRatingCount;
 
 @end

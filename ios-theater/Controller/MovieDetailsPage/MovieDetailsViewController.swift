@@ -47,7 +47,7 @@ class MovieDetailsViewController: UIViewController {
     present(movieInfoViewController, animated: true)
   }
   
-  private func fetchData(){
+  private func fetchData() {
     movieDetailsViewModel.fetchMovieDetails() {
       self.setupBasicInfo()
       self.ratingView.setRatingCount()

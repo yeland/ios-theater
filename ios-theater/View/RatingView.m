@@ -10,9 +10,16 @@
 #import "RatingView.h"
 #import "ios_theater-Swift.h"
 
+@interface RatingView()
+
+@property MovieDetailsViewModel *movieDetailsViewModel;
+
+@end
+
 @implementation RatingView
 
--(void) configure: (MovieDetailsViewModel*) movieDetailsViewModel {
+- (void)configure:(MovieDetailsViewModel*) movieDetailsViewModel
+{
   self.movieDetailsViewModel = movieDetailsViewModel;
   _numberLabel.text = [NSString stringWithFormat:@"%.1f", movieDetailsViewModel.ratingNumber];
   NSMutableAttributedString *ratingString = [_starsLabel setStarsWithRating:movieDetailsViewModel.ratingNumber size:15];
@@ -30,7 +37,8 @@
   _oneProgress.progress = [[movieDetailsViewModel percentOfStars][4] floatValue];
 }
 
--(void) setRatingCount {
+- (void)setRatingCount
+{
   NSString *words = NSLocalizedString(@"ratingCount", @"");
   _ratingCountLabel.text = [NSString stringWithFormat:@"%ld %@", (long)_movieDetailsViewModel.ratingCount, words];
 }
