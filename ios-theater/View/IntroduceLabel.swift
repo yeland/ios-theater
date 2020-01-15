@@ -14,10 +14,11 @@ class IntroduceLabel: UILabel {
   func configure(withSummary summary: String) {
     self.summary = summary
     let linesArray = summary.getLinesArrayFromLabel(font: self.font, rect: self.frame)
-    var introductionString = NSMutableAttributedString(string: linesArray[0])
+    var introductionString = NSMutableAttributedString(string: "")
     if linesArray.count <= 4 {
       introductionString = NSMutableAttributedString(string: summary)
     } else {
+      introductionString.append(NSAttributedString(string: linesArray[0]))
       introductionString.append(NSAttributedString(string: linesArray[1]))
       introductionString.append(NSAttributedString(string: linesArray[2]))
       let fourthLine = generateFourthLine(content: linesArray[3])
