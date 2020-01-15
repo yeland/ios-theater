@@ -40,6 +40,8 @@
 		F87771F323BDEBE9003FC138 /* MovieInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87771F223BDEBE9003FC138 /* MovieInfoCell.swift */; };
 		F87771F423BF280C003FC138 /* MovieInfoHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F87771F623BF280C003FC138 /* MovieInfoHeader.xib */; };
 		F877720123C46F27003FC138 /* RatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F877720023C46F27003FC138 /* RatingView.m */; };
+		F8ED99DF23C81D0D000B0041 /* String+LinesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED99DE23C81D0D000B0041 /* String+LinesArray.swift */; };
+		F8ED99E123CC16C8000B0041 /* IntroduceLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED99E023CC16C8000B0041 /* IntroduceLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +89,8 @@
 		F87771FF23C46EF9003FC138 /* ios-theater-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-theater-Bridging-Header.h"; sourceTree = "<group>"; };
 		F877720023C46F27003FC138 /* RatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingView.m; sourceTree = "<group>"; };
 		F877720223C46F2F003FC138 /* RatingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RatingView.h; sourceTree = "<group>"; };
+		F8ED99DE23C81D0D000B0041 /* String+LinesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+LinesArray.swift"; sourceTree = "<group>"; };
+		F8ED99E023CC16C8000B0041 /* IntroduceLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroduceLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 				F82BA3C723B3421E0016F0F6 /* UILabel+RatingStars.swift */,
 				F82BA3B123B0BB0F0016F0F6 /* NetworkClient.swift */,
 				F82BA3C523B1FAC40016F0F6 /* UIImageView+Networking.swift */,
+				F8ED99DE23C81D0D000B0041 /* String+LinesArray.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -229,6 +234,8 @@
 				F87771F223BDEBE9003FC138 /* MovieInfoCell.swift */,
 				F877720223C46F2F003FC138 /* RatingView.h */,
 				F877720023C46F27003FC138 /* RatingView.m */,
+				F87771FF23C46EF9003FC138 /* ios-theater-Bridging-Header.h */,
+				F8ED99E023CC16C8000B0041 /* IntroduceLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -380,6 +387,7 @@
 				F82BA3A423AA1CCE0016F0F6 /* BannerCell.swift in Sources */,
 				F87771F323BDEBE9003FC138 /* MovieInfoCell.swift in Sources */,
 				F877720123C46F27003FC138 /* RatingView.m in Sources */,
+				F8ED99E123CC16C8000B0041 /* IntroduceLabel.swift in Sources */,
 				F82BA3C623B1FAC40016F0F6 /* UIImageView+Networking.swift in Sources */,
 				F87771EB23BB223F003FC138 /* MovieDetailsViewModel.swift in Sources */,
 				F82BA3BA23B0C54A0016F0F6 /* Rating.swift in Sources */,
@@ -387,6 +395,7 @@
 				F834B8BC23A8533300DA85D2 /* AppDelegate.swift in Sources */,
 				F834B8BE23A8533300DA85D2 /* SceneDelegate.swift in Sources */,
 				F82BA3D223B5B0820016F0F6 /* BannerCollectionViewDelegate.swift in Sources */,
+				F8ED99DF23C81D0D000B0041 /* String+LinesArray.swift in Sources */,
 				F82BA3D023B5AE1E0016F0F6 /* BannerCollectionViewDatasourse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
