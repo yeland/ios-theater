@@ -8,7 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "RatingView.h"
-#import "ios_theater-Swift.h"
+
+#if INTERNAL_TARGET
+  #import "ios_theater_internal-Swift.h"
+#else
+  #import "ios_theater-Swift.h"
+#endif
 
 @interface RatingView()
 
