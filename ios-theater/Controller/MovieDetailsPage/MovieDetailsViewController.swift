@@ -15,14 +15,18 @@ class MovieDetailsViewController: UIViewController {
   @IBOutlet weak var basicInfoLabel: UILabel!
   @IBOutlet weak var ratingView: RatingView!
   @IBOutlet weak var introductionLabel: IntroduceLabel!
+  @IBOutlet weak var castsCollectionView: UICollectionView!
   
   private var movieDetailsViewModel: MovieDetailsViewModel!
+  private var castCollectionViewDatasourse: CastCollectionViewDatasourse?
+  private var castCollectionViewDelegate: CastCollectionViewDelegate?
   
   override func viewDidLoad() {
     navigationController?.navigationBar.isHidden = false
     let title = NSLocalizedString("movie", comment: "")
     self.title = title
 
+    setupDatasourseAndDelegate()
     let movie = self.movieDetailsViewModel.movie
     guard let url = URL(string: movie.images.large) else { return }
     self.posterImage.setImage(withURL: url)
@@ -40,6 +44,14 @@ class MovieDetailsViewController: UIViewController {
   
   func configure(withMovie movie: Movie) {
     movieDetailsViewModel = MovieDetailsViewModel(withMovie: movie)
+  }
+  
+  func setupDatasourseAndDelegate() {
+    castCollectionViewDatasourse = CastCollectionViewDatasourse(staffs: movieDetailsViewModel.castStaffs)
+    let size = CGSize(width: 100, height: castsCollectionView.bounds.height)
+    castCollectionViewDelegate = CastCollectionViewDelegate(size: size)
+    castsCollectionView.dataSource = castCollectionViewDatasourse
+    castsCollectionView.delegate = castCollectionViewDelegate
   }
   
   @objc func clickToGetMoreInformation() {

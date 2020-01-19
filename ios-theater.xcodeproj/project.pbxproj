@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B77FBC90471E437AF02A56CC /* Pods_ios_theater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138C0A9E5351E7A985DF3712 /* Pods_ios_theater.framework */; };
+		F81FECA823CEA5030000E3E9 /* CastCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FECA723CEA5030000E3E9 /* CastCollectionViewDelegate.swift */; };
 		F82BA3A423AA1CCE0016F0F6 /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3A323AA1CCE0016F0F6 /* BannerCell.swift */; };
 		F82BA3B223B0BB0F0016F0F6 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3B123B0BB0F0016F0F6 /* NetworkClient.swift */; };
 		F82BA3B423B0C0EB0016F0F6 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3B323B0C0EB0016F0F6 /* MoviesViewModel.swift */; };
@@ -42,12 +43,15 @@
 		F877720123C46F27003FC138 /* RatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F877720023C46F27003FC138 /* RatingView.m */; };
 		F8ED99DF23C81D0D000B0041 /* String+LinesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED99DE23C81D0D000B0041 /* String+LinesArray.swift */; };
 		F8ED99E123CC16C8000B0041 /* IntroduceLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED99E023CC16C8000B0041 /* IntroduceLabel.swift */; };
+		F8ED99E323CD9571000B0041 /* CastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED99E223CD9571000B0041 /* CastCell.swift */; };
+		F8ED99E523CD9BE6000B0041 /* CastCollectionViewDatasourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED99E423CD9BE6000B0041 /* CastCollectionViewDatasourse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		052243F56C7D6A5E4ED9BCCD /* Pods-ios-theater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-theater.release.xcconfig"; path = "Target Support Files/Pods-ios-theater/Pods-ios-theater.release.xcconfig"; sourceTree = "<group>"; };
 		138C0A9E5351E7A985DF3712 /* Pods_ios_theater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_theater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F359972AD4DFC5825FBAE5B /* Pods-ios-theater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-theater.debug.xcconfig"; path = "Target Support Files/Pods-ios-theater/Pods-ios-theater.debug.xcconfig"; sourceTree = "<group>"; };
+		F81FECA723CEA5030000E3E9 /* CastCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		F82BA3A323AA1CCE0016F0F6 /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
 		F82BA3B123B0BB0F0016F0F6 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		F82BA3B323B0C0EB0016F0F6 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 		F877720223C46F2F003FC138 /* RatingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RatingView.h; sourceTree = "<group>"; };
 		F8ED99DE23C81D0D000B0041 /* String+LinesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+LinesArray.swift"; sourceTree = "<group>"; };
 		F8ED99E023CC16C8000B0041 /* IntroduceLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroduceLabel.swift; sourceTree = "<group>"; };
+		F8ED99E223CD9571000B0041 /* CastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastCell.swift; sourceTree = "<group>"; };
+		F8ED99E423CD9BE6000B0041 /* CastCollectionViewDatasourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastCollectionViewDatasourse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,8 +240,8 @@
 				F87771F223BDEBE9003FC138 /* MovieInfoCell.swift */,
 				F877720223C46F2F003FC138 /* RatingView.h */,
 				F877720023C46F27003FC138 /* RatingView.m */,
-				F87771FF23C46EF9003FC138 /* ios-theater-Bridging-Header.h */,
 				F8ED99E023CC16C8000B0041 /* IntroduceLabel.swift */,
+				F8ED99E223CD9571000B0041 /* CastCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -245,6 +251,8 @@
 			children = (
 				F87771E823BAF545003FC138 /* MovieDetailsViewController.swift */,
 				F87771EC23BDC1D0003FC138 /* MovieInfoViewController.swift */,
+				F8ED99E423CD9BE6000B0041 /* CastCollectionViewDatasourse.swift */,
+				F81FECA723CEA5030000E3E9 /* CastCollectionViewDelegate.swift */,
 			);
 			path = MovieDetailsPage;
 			sourceTree = "<group>";
@@ -372,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F87771E923BAF545003FC138 /* MovieDetailsViewController.swift in Sources */,
+				F8ED99E323CD9571000B0041 /* CastCell.swift in Sources */,
 				F82BA3D823B5D78D0016F0F6 /* HotMoviesCollectionViewDelegate.swift in Sources */,
 				F834B8C023A8533300DA85D2 /* HomePageViewController.swift in Sources */,
 				F82BA3DC23B5F95D0016F0F6 /* HotMoviesViewController.swift in Sources */,
@@ -388,6 +397,7 @@
 				F87771F323BDEBE9003FC138 /* MovieInfoCell.swift in Sources */,
 				F877720123C46F27003FC138 /* RatingView.m in Sources */,
 				F8ED99E123CC16C8000B0041 /* IntroduceLabel.swift in Sources */,
+				F8ED99E523CD9BE6000B0041 /* CastCollectionViewDatasourse.swift in Sources */,
 				F82BA3C623B1FAC40016F0F6 /* UIImageView+Networking.swift in Sources */,
 				F87771EB23BB223F003FC138 /* MovieDetailsViewModel.swift in Sources */,
 				F82BA3BA23B0C54A0016F0F6 /* Rating.swift in Sources */,
@@ -395,6 +405,7 @@
 				F834B8BC23A8533300DA85D2 /* AppDelegate.swift in Sources */,
 				F834B8BE23A8533300DA85D2 /* SceneDelegate.swift in Sources */,
 				F82BA3D223B5B0820016F0F6 /* BannerCollectionViewDelegate.swift in Sources */,
+				F81FECA823CEA5030000E3E9 /* CastCollectionViewDelegate.swift in Sources */,
 				F8ED99DF23C81D0D000B0041 /* String+LinesArray.swift in Sources */,
 				F82BA3D023B5AE1E0016F0F6 /* BannerCollectionViewDatasourse.swift in Sources */,
 			);

@@ -106,6 +106,10 @@ import Foundation
   var ratingCount: Int {
     return movie.ratings_count ?? 0
   }
+  
+  var castStaffs: [Person] {
+    return movie.directors + movie.casts
+  }
 }
 
 struct MovieInfo {
