@@ -435,16 +435,14 @@ ICAgICAgICAgICAgICAgA
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="GiU-al-Irp">
+                                            <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GiU-al-Irp">
                                                 <rect key="frame" x="0.0" y="692.5" width="414" height="600"/>
-                                                <color key="backgroundColor" red="0.92561131720000001" green="0.93316656350000005" blue="0.94117838139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" priority="250" constant="600" id="5l8-Rk-FXo"/>
                                                 </constraints>
                                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </tableView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.92561131720000001" green="0.93316656350000005" blue="0.94117838139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="5Rr-eb-1wc" secondAttribute="trailing" constant="20" id="0Tz-e9-IWP"/>
                                             <constraint firstItem="mkb-ri-tdG" firstAttribute="top" secondItem="5Rr-eb-1wc" secondAttribute="bottom" constant="5" id="3Vo-3R-WEq"/>

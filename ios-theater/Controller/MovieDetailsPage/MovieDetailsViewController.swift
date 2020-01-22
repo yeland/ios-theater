@@ -46,6 +46,7 @@ class MovieDetailsViewController: UIViewController {
     commentTableView.register(UINib(nibName: "CommentCell", bundle: nil), forCellReuseIdentifier: "CommentCell")
     commentTableView.translatesAutoresizingMaskIntoConstraints = false
     commentTableHightContraint.isActive = true
+    
     fetchData()
   }
   

@@ -115,8 +115,8 @@ import Foundation
     var totalHeight: CGFloat = 0
     let comments = movie.popular_comments ?? []
     for comment in comments {
-      let height = (comment.content).height(constrainedToWidth: UIScreen.main.bounds.width - CGFloat(40), size: 15)
-      totalHeight += (height + 130)
+      let height = (comment.content).height(constrainedToWidth: UIScreen.main.bounds.width - CGFloat(40), size: 16)
+      totalHeight += (height + 100)
     }
     return totalHeight
   }
