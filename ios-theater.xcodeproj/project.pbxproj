@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B77FBC90471E437AF02A56CC /* Pods_ios_theater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138C0A9E5351E7A985DF3712 /* Pods_ios_theater.framework */; };
+		F80D8C0A23D7E75F00A06B34 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80D8C0923D7E75F00A06B34 /* CommentCell.swift */; };
+		F80D8C0B23D7E75F00A06B34 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80D8C0923D7E75F00A06B34 /* CommentCell.swift */; };
+		F80D8C0D23D7E77200A06B34 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F80D8C0C23D7E77200A06B34 /* CommentCell.xib */; };
+		F80D8C0E23D7E77200A06B34 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F80D8C0C23D7E77200A06B34 /* CommentCell.xib */; };
 		F81FECA823CEA5030000E3E9 /* CastCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FECA723CEA5030000E3E9 /* CastCollectionViewDelegate.swift */; };
 		F82BA3A423AA1CCE0016F0F6 /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3A323AA1CCE0016F0F6 /* BannerCell.swift */; };
 		F82BA3B223B0BB0F0016F0F6 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BA3B123B0BB0F0016F0F6 /* NetworkClient.swift */; };
@@ -79,6 +83,10 @@
 		F8DFB59123D1C1550088E5C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F834B8C623A8533700DA85D2 /* LaunchScreen.storyboard */; };
 		F8DFB59223D1C1550088E5C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F834B8C423A8533700DA85D2 /* Assets.xcassets */; };
 		F8DFB59323D1C1550088E5C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F834B8C123A8533300DA85D2 /* Main.storyboard */; };
+		F8DFBBE023D8433F0009812C /* CommentTableViewDatasourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DFBBDF23D8433F0009812C /* CommentTableViewDatasourse.swift */; };
+		F8DFBBE323D8449D0009812C /* CommentTableViewDatasourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DFBBDF23D8433F0009812C /* CommentTableViewDatasourse.swift */; };
+		F8DFBBE623D84C920009812C /* String+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DFBBE523D84C920009812C /* String+Height.swift */; };
+		F8DFBBE723D84C960009812C /* String+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DFBBE523D84C920009812C /* String+Height.swift */; };
 		F8ED99DF23C81D0D000B0041 /* String+LinesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED99DE23C81D0D000B0041 /* String+LinesArray.swift */; };
 		F8ED99E123CC16C8000B0041 /* IntroduceLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED99E023CC16C8000B0041 /* IntroduceLabel.swift */; };
 		F8ED99E323CD9571000B0041 /* CastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ED99E223CD9571000B0041 /* CastCell.swift */; };
@@ -89,6 +97,8 @@
 		052243F56C7D6A5E4ED9BCCD /* Pods-ios-theater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-theater.release.xcconfig"; path = "Target Support Files/Pods-ios-theater/Pods-ios-theater.release.xcconfig"; sourceTree = "<group>"; };
 		138C0A9E5351E7A985DF3712 /* Pods_ios_theater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_theater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F359972AD4DFC5825FBAE5B /* Pods-ios-theater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-theater.debug.xcconfig"; path = "Target Support Files/Pods-ios-theater/Pods-ios-theater.debug.xcconfig"; sourceTree = "<group>"; };
+		F80D8C0923D7E75F00A06B34 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		F80D8C0C23D7E77200A06B34 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		F81FECA723CEA5030000E3E9 /* CastCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		F82BA3A323AA1CCE0016F0F6 /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
 		F82BA3B123B0BB0F0016F0F6 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
@@ -132,6 +142,8 @@
 		F877720023C46F27003FC138 /* RatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingView.m; sourceTree = "<group>"; };
 		F877720223C46F2F003FC138 /* RatingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RatingView.h; sourceTree = "<group>"; };
 		F8DFB59823D1C1550088E5C0 /* ios-theater-internal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-theater-internal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8DFBBDF23D8433F0009812C /* CommentTableViewDatasourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewDatasourse.swift; sourceTree = "<group>"; };
+		F8DFBBE523D84C920009812C /* String+Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Height.swift"; sourceTree = "<group>"; };
 		F8ED99DE23C81D0D000B0041 /* String+LinesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+LinesArray.swift"; sourceTree = "<group>"; };
 		F8ED99E023CC16C8000B0041 /* IntroduceLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroduceLabel.swift; sourceTree = "<group>"; };
 		F8ED99E223CD9571000B0041 /* CastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastCell.swift; sourceTree = "<group>"; };
@@ -182,6 +194,7 @@
 				F82BA3B123B0BB0F0016F0F6 /* NetworkClient.swift */,
 				F82BA3C523B1FAC40016F0F6 /* UIImageView+Networking.swift */,
 				F8ED99DE23C81D0D000B0041 /* String+LinesArray.swift */,
+				F8DFBBE523D84C920009812C /* String+Height.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -290,6 +303,8 @@
 				F877720023C46F27003FC138 /* RatingView.m */,
 				F8ED99E023CC16C8000B0041 /* IntroduceLabel.swift */,
 				F8ED99E223CD9571000B0041 /* CastCell.swift */,
+				F80D8C0923D7E75F00A06B34 /* CommentCell.swift */,
+				F80D8C0C23D7E77200A06B34 /* CommentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -301,6 +316,7 @@
 				F87771EC23BDC1D0003FC138 /* MovieInfoViewController.swift */,
 				F8ED99E423CD9BE6000B0041 /* CastCollectionViewDatasourse.swift */,
 				F81FECA723CEA5030000E3E9 /* CastCollectionViewDelegate.swift */,
+				F8DFBBDF23D8433F0009812C /* CommentTableViewDatasourse.swift */,
 			);
 			path = MovieDetailsPage;
 			sourceTree = "<group>";
@@ -393,6 +409,7 @@
 				F82BA3C023B1E6CD0016F0F6 /* MovieCollectionCell.xib in Resources */,
 				F87771E323B9FAAB003FC138 /* Localizable.strings in Resources */,
 				F834B8C823A8533700DA85D2 /* LaunchScreen.storyboard in Resources */,
+				F80D8C0D23D7E77200A06B34 /* CommentCell.xib in Resources */,
 				F834B8C523A8533700DA85D2 /* Assets.xcassets in Resources */,
 				F834B8C323A8533300DA85D2 /* Main.storyboard in Resources */,
 			);
@@ -408,6 +425,7 @@
 				F8DFB58F23D1C1550088E5C0 /* MovieCollectionCell.xib in Resources */,
 				F8DFB59023D1C1550088E5C0 /* Localizable.strings in Resources */,
 				F8DFB59123D1C1550088E5C0 /* LaunchScreen.storyboard in Resources */,
+				F80D8C0E23D7E77200A06B34 /* CommentCell.xib in Resources */,
 				F8DFB59223D1C1550088E5C0 /* Assets.xcassets in Resources */,
 				F8DFB59323D1C1550088E5C0 /* Main.storyboard in Resources */,
 			);
@@ -504,10 +522,13 @@
 				F87771E923BAF545003FC138 /* MovieDetailsViewController.swift in Sources */,
 				F8ED99E323CD9571000B0041 /* CastCell.swift in Sources */,
 				F82BA3D823B5D78D0016F0F6 /* HotMoviesCollectionViewDelegate.swift in Sources */,
+				F8DFBBE023D8433F0009812C /* CommentTableViewDatasourse.swift in Sources */,
 				F834B8C023A8533300DA85D2 /* HomePageViewController.swift in Sources */,
 				F82BA3DC23B5F95D0016F0F6 /* HotMoviesViewController.swift in Sources */,
+				F80D8C0A23D7E75F00A06B34 /* CommentCell.swift in Sources */,
 				F82BA3B823B0C42F0016F0F6 /* Movies.swift in Sources */,
 				F87771DE23B9D666003FC138 /* HotMoviesFooter.swift in Sources */,
+				F8DFBBE623D84C920009812C /* String+Height.swift in Sources */,
 				F87771ED23BDC1D0003FC138 /* MovieInfoViewController.swift in Sources */,
 				F82BA3B423B0C0EB0016F0F6 /* MoviesViewModel.swift in Sources */,
 				F82BA3DE23B5FDEE0016F0F6 /* MovieTableCell.swift in Sources */,
@@ -539,11 +560,14 @@
 			files = (
 				F8DFB56C23D1C1550088E5C0 /* MovieDetailsViewController.swift in Sources */,
 				F8DFB56D23D1C1550088E5C0 /* CastCell.swift in Sources */,
+				F8DFBBE323D8449D0009812C /* CommentTableViewDatasourse.swift in Sources */,
 				F8DFB56E23D1C1550088E5C0 /* HotMoviesCollectionViewDelegate.swift in Sources */,
 				F8DFB56F23D1C1550088E5C0 /* HomePageViewController.swift in Sources */,
 				F8DFB57023D1C1550088E5C0 /* HotMoviesViewController.swift in Sources */,
+				F80D8C0B23D7E75F00A06B34 /* CommentCell.swift in Sources */,
 				F8DFB57123D1C1550088E5C0 /* Movies.swift in Sources */,
 				F8DFB57223D1C1550088E5C0 /* HotMoviesFooter.swift in Sources */,
+				F8DFBBE723D84C960009812C /* String+Height.swift in Sources */,
 				F8DFB57323D1C1550088E5C0 /* MovieInfoViewController.swift in Sources */,
 				F8DFB57423D1C1550088E5C0 /* MoviesViewModel.swift in Sources */,
 				F8DFB57523D1C1550088E5C0 /* MovieTableCell.swift in Sources */,
