@@ -33,6 +33,7 @@ struct Movie: Codable {
   var languages: [String]?
   var ratings_count: Int?
   var summary: String?
+  var popular_comments: [Comment]?
 }
 
 struct Images: Codable {
@@ -43,5 +44,21 @@ struct Images: Codable {
 
 struct Person: Codable {
   var avatars: Images?
+  var name: String
+}
+
+struct Comment: Codable {
+  var rating: RatingInComment
+  var author: Author
+  var content: String
+  var created_at: String
+}
+
+struct RatingInComment: Codable {
+  var value: Double
+}
+
+struct Author: Codable {
+  var avatar: String
   var name: String
 }

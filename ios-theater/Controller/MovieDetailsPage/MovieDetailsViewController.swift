@@ -16,17 +16,20 @@ class MovieDetailsViewController: UIViewController {
   @IBOutlet weak var ratingView: RatingView!
   @IBOutlet weak var introductionLabel: IntroduceLabel!
   @IBOutlet weak var castsCollectionView: UICollectionView!
+  @IBOutlet weak var commentTableView: UITableView!
   
   private var movieDetailsViewModel: MovieDetailsViewModel!
   private var castCollectionViewDatasourse: CastCollectionViewDatasourse?
   private var castCollectionViewDelegate: CastCollectionViewDelegate?
+  private var commentTableViewDatasourse: CommentTableViewDatasourse?
+  private lazy var commentTableHightContraint = commentTableView.heightAnchor.constraint(equalToConstant: 0)
   
   override func viewDidLoad() {
     navigationController?.navigationBar.isHidden = false
     let title = NSLocalizedString("movie", comment: "")
     self.title = title
 
-    setupDatasourseAndDelegate()
+    setupCastCollectionViewDatasourseAndDelegate()
     let movie = self.movieDetailsViewModel.movie
     guard let url = URL(string: movie.images.large) else { return }
     self.posterImage.setImage(withURL: url)
@@ -39,6 +42,11 @@ class MovieDetailsViewController: UIViewController {
     
     ratingView.configure(movieDetailsViewModel)
     ratingView.layer.cornerRadius = 10
+    
+    commentTableView.register(UINib(nibName: "CommentCell", bundle: nil), forCellReuseIdentifier: "CommentCell")
+    commentTableView.translatesAutoresizingMaskIntoConstraints = false
+    commentTableHightContraint.isActive = true
+    
     fetchData()
   }
   
@@ -46,7 +54,7 @@ class MovieDetailsViewController: UIViewController {
     movieDetailsViewModel = MovieDetailsViewModel(withMovie: movie)
   }
   
-  func setupDatasourseAndDelegate() {
+  func setupCastCollectionViewDatasourseAndDelegate() {
     castCollectionViewDatasourse = CastCollectionViewDatasourse(staffs: movieDetailsViewModel.castStaffs)
     let size = CGSize(width: 100, height: castsCollectionView.bounds.height)
     castCollectionViewDelegate = CastCollectionViewDelegate(size: size)
@@ -65,6 +73,8 @@ class MovieDetailsViewController: UIViewController {
       self.setupBasicInfo()
       self.ratingView.setRatingCount()
       self.introductionLabel.configure(withSummary: self.movieDetailsViewModel.movie.summary ?? "")
+      self.setupCommentTableViewDataSourse()
+      self.commentTableHightContraint.constant = self.movieDetailsViewModel.getCommentsHeight()
     }
   }
   
@@ -76,5 +86,10 @@ class MovieDetailsViewController: UIViewController {
     let rightString = NSAttributedString(attachment: rightAttachment)
     basicInfoString.append(rightString)
     self.basicInfoLabel.attributedText = basicInfoString
+  }
+  
+  private func setupCommentTableViewDataSourse() {
+    commentTableViewDatasourse = CommentTableViewDatasourse(comments: movieDetailsViewModel.movie.popular_comments ?? [])
+    commentTableView.dataSource = commentTableViewDatasourse
   }
 }
